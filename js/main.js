@@ -94,7 +94,7 @@ function initHeroSlider() {
 
   function startAutoplay() {
     stopAutoplay();
-    timer = window.setInterval(nextSlide, 6000);
+    timer = window.setInterval(nextSlide, 4000);
   }
 
   function stopAutoplay() {
