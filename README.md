@@ -10,15 +10,14 @@ Hastane için sıfırdan tasarlanmış, statik HTML/CSS/JS tabanlı kurumsal web
 - `doktorlarimiz.html` — Doktorlarımız
 - `iletisim.html` — İletişim ve online randevu formu
 
-## Önemli: Doldurulması Gereken Yer Tutucular
+## İçerik Kaynağı
 
-Bu site tasarım/şablon olarak hazırlanmıştır. Canlıya almadan önce aşağıdaki yer tutucu içerikler gerçek bilgilerle değiştirilmelidir:
+Sitedeki kurumsal bilgiler (adres, telefon, e-posta, tarihçe, bölümler, doktor kadrosu) [egeyasamhastanesi.com.tr](https://www.egeyasamhastanesi.com.tr) adresinden alınmıştır.
 
-- **Adres, telefon, e-posta** — tüm sayfaların footer'ında ve `iletisim.html` içinde `[Hastane Adresi Buraya Gelecek]` ve `444 0 000` ile işaretli.
-- **Doktor bilgileri** — `doktorlarimiz.html` ve ana sayfadaki doktor kartları `[İsim Soyisim]` yer tutucusu ile işaretli; gerçek isim, unvan ve fotoğraflarla değiştirilmelidir.
-- **Harita** — `iletisim.html` içindeki `.map-frame` alanına gerçek Google Haritalar embed kodu eklenmelidir.
-- **Randevu formu** — `iletisim.html` içindeki form şu an yalnızca arayüz demosudur (`js/main.js`), bir sunucuya veri göndermez. Gerçek randevu akışı için bir API/e-posta servisi (ör. `api/` klasöründe bir Vercel Function) bağlanmalıdır.
-- **Kurumsal metinler** — `hakkimizda.html` içindeki tarihçe/misyon/vizyon metinleri örnek olarak yazılmıştır.
+## Kalan Geliştirme Notları
+
+- **Doktor fotoğrafları** — `doktorlarimiz.html` ve ana sayfadaki doktor kartları şu an ikon kullanıyor; gerçek fotoğraflar eklenebilir.
+- **Randevu formu** — `iletisim.html` içindeki form şu an yalnızca arayüz demosudur (`js/main.js`), bir sunucuya veri göndermez. Gerçek randevu akışı için bir API/e-posta servisi (ör. `api/` klasöründe bir Vercel Function) veya mevcut e-randevu sistemine (randevu.meddata.com.tr/egeyasamhastanesi) yönlendirme bağlanmalıdır.
 
 ## Deploy Adımları (Vercel)
 
