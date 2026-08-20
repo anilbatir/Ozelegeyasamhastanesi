@@ -48,15 +48,21 @@
 
 <main>
 
-  <section class="hero">
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('img/hero/hero1.avif')"></div>
+      <div class="hero-slide" style="background-image:url('img/hero/hero2.avif')"></div>
+      <div class="hero-slide" style="background-image:url('img/hero/hero3.avif')"></div>
+    </div>
+    <div class="hero-overlay"></div>
     <div class="container hero-grid">
-      <div>
-        <span class="hero-eyebrow">
+      <div class="hero-content" id="hero-content">
+        <span class="hero-eyebrow" data-hero-eyebrow>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
           7/24 Acil ve Uzman Hekim Desteği
         </span>
-        <h1>Sağlığınız için <span>güvenilir</span>, modern ve şefkatli bakım</h1>
-        <p class="lead">Özel Ege Yaşam Hastanesi olarak; alanında uzman hekim kadromuz, ileri tanı-tedavi teknolojilerimiz ve hasta odaklı yaklaşımımızla yanınızdayız.</p>
+        <h1 data-hero-title>Sağlığınız için <span>güvenilir</span>, modern ve şefkatli bakım</h1>
+        <p class="lead" data-hero-lead>Özel Ege Yaşam Hastanesi olarak; alanında uzman hekim kadromuz, ileri tanı-tedavi teknolojilerimiz ve hasta odaklı yaklaşımımızla yanınızdayız.</p>
         <div class="hero-actions">
           <a href="iletisim.html#randevu" class="btn btn-primary">Online Randevu Al</a>
           <a href="bolumler.html" class="btn btn-ghost">Bölümlerimizi İnceleyin</a>
@@ -67,19 +73,18 @@
           <div><strong>100%</strong><span>Hasta Odaklı Bakım</span></div>
         </div>
       </div>
-      <div class="hero-visual">
-        <svg viewBox="0 0 200 160" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20 90 L55 90 L68 55 L85 120 L100 70 L112 90 L180 90"/>
-          <circle cx="100" cy="90" r="70" stroke-opacity="0.35"/>
-        </svg>
-        <div class="hero-badge">
-          <span class="dot"></span>
-          <div>
-            <strong>Acil Servis Aktif</strong>
-            <span>Kesintisiz 7/24 müdahale imkânı</span>
-          </div>
-        </div>
+    </div>
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <div>
+        <strong>Acil Servis Aktif</strong>
+        <span>Kesintisiz 7/24 müdahale imkânı</span>
       </div>
+    </div>
+    <div class="hero-dots" data-hero-dots>
+      <button type="button" class="active" data-slide="0" aria-label="1. görseli göster"></button>
+      <button type="button" data-slide="1" aria-label="2. görseli göster"></button>
+      <button type="button" data-slide="2" aria-label="3. görseli göster"></button>
     </div>
   </section>
 
