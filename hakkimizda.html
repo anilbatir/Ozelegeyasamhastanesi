@@ -13,7 +13,9 @@
 </head>
 <body>
 <div class="about-shell">
-  <section class="about-hero">
+  <section class="about-hero" aria-labelledby="about-title">
+    <div class="hero-vignette" aria-hidden="true"></div>
+
     <header class="about-topbar">
       <a class="about-logo" href="index.html" aria-label="Özel Ege Yaşam Hastanesi ana sayfa">
         <img src="img/logo/ege-yasam-logo.png" alt="Özel Ege Yaşam Hastanesi">
@@ -30,24 +32,25 @@
 
       <div class="about-actions">
         <a class="about-call" href="tel:+902322265656">
-          <span class="phone-icon" aria-hidden="true">☎</span>
+          <span class="phone-icon" aria-hidden="true">⌕</span>
           <span><small>7/24 Çağrı Merkezi</small><strong>0232 226 56 56</strong></span>
         </a>
-        <a class="about-cta" href="iletisim.html#randevu">Randevu Al</a>
+        <a class="about-cta" href="iletisim.html#randevu">Randevu Al <span>▣</span></a>
       </div>
     </header>
 
     <div class="about-content">
-      <div class="crumb">
-        <a href="index.html">Ana Sayfa</a><span>›</span><span>Kurumsal</span><span>›</span><strong>Hakkımızda</strong>
+      <div class="crumb" aria-label="Sayfa yolu">
+        <a href="index.html">⌂</a><a href="index.html">Ana Sayfa</a><span>›</span><span>Kurumsal</span><span>›</span><strong>Hakkımızda</strong>
       </div>
 
-      <h1>Hakkımızda</h1>
+      <span class="section-label">KURUMSAL</span>
+      <h1 id="about-title">Hakkımızda</h1>
       <div class="subtitle">Sağlığınız için, yaşamın her anında yanınızdayız.</div>
       <p>Ege Yaşam Hastanesi, modern tıbbın tüm imkânlarını hasta odaklı anlayışla birleştirerek, güvenli, kaliteli ve erişilebilir sağlık hizmeti sunmayı ilke edinmiştir.</p>
 
       <div class="feature-row" aria-label="Kurumsal özellikler">
-        <div class="feature-chip"><span class="feature-icon">♢</span><span>Güvenli ve<br>Kaliteli Hizmet</span></div>
+        <div class="feature-chip"><span class="feature-icon">◇</span><span>Güvenli ve<br>Kaliteli Hizmet</span></div>
         <div class="feature-chip"><span class="feature-icon">♙</span><span>Uzman Kadro ve<br>Hasta Odaklı Yaklaşım</span></div>
         <div class="feature-chip"><span class="feature-icon">◷</span><span>7/24 Acil Servis ve<br>Kesintisiz Hizmet</span></div>
         <div class="feature-chip"><span class="feature-icon">♡</span><span>Modern Teknoloji<br>ve Donanım</span></div>
