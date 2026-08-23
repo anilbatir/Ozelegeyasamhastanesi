@@ -1,0 +1,11 @@
+/* Subtle scroll motion — restrained for healthcare UI */
+.scroll-reveal{opacity:0;transform:translate3d(0,14px,0);transition:opacity .62s cubic-bezier(.2,.7,.2,1),transform .62s cubic-bezier(.2,.7,.2,1)}
+.scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.scroll-stagger-item{opacity:0;transform:translate3d(0,12px,0);transition:opacity .54s cubic-bezier(.2,.7,.2,1),transform .54s cubic-bezier(.2,.7,.2,1)}
+.scroll-stagger-item.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.topbar{transition:min-height .28s ease,padding .28s ease,box-shadow .28s ease,background-color .28s ease,backdrop-filter .28s ease}
+.topbar.scroll-compact{box-shadow:0 9px 26px rgba(24,72,110,.07);background:rgba(255,255,255,.94);backdrop-filter:blur(14px)}
+.topbar.scroll-compact .logo img{transform:scale(.94)}
+.topbar .logo img{transition:transform .28s ease}
+.scroll-parallax-bg{transform:translate3d(0,var(--scroll-bg-y,0px),0);will-change:transform}
+@media (prefers-reduced-motion:reduce){.scroll-reveal,.scroll-stagger-item{opacity:1!important;transform:none!important;transition:none!important}.scroll-parallax-bg{transform:none!important}.topbar,.topbar .logo img{transition:none!important}}
