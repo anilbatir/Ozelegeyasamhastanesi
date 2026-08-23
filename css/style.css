@@ -328,15 +328,9 @@ ul { padding: 0; margin: 0; list-style: none; }
   inset: -6% -8% 0 -8%;
   border-radius: 28px;
   overflow: hidden;
-  background:
-    radial-gradient(110px 80px at 24% 16%, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 62%),
-    radial-gradient(150px 110px at 76% 10%, rgba(255,225,180,0.75) 0%, rgba(255,225,180,0) 62%),
-    radial-gradient(120px 90px at 14% 56%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 62%),
-    radial-gradient(170px 130px at 84% 58%, rgba(190,215,247,1) 0%, rgba(190,215,247,0) 62%),
-    radial-gradient(130px 100px at 48% 88%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 62%),
-    radial-gradient(90px 70px at 90% 90%, rgba(255,235,200,0.7) 0%, rgba(255,235,200,0) 62%),
-    linear-gradient(105deg, #f7fafd 0%, #e4eef8 45%, #c4daf0 100%);
-  filter: blur(14px);
+  background-image: url('../img/hero/hero-depth-bg.jpg');
+  background-size: cover;
+  background-position: center;
   pointer-events: none;
 }
 .hero-photo-glow {
