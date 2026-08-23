@@ -331,9 +331,17 @@ ul { padding: 0; margin: 0; list-style: none; }
   z-index: 1;
   width: 88%;
   max-width: 460px;
+  height: 92%;
   object-fit: contain;
   object-position: bottom center;
   filter: drop-shadow(0 20px 40px rgba(44, 69, 82, 0.18));
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.hero-photo.is-swapping { opacity: 0; transform: translateY(8px); }
+.hero-photo.is-building {
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
 }
 .hero-float-card {
   position: absolute;
@@ -398,6 +406,87 @@ ul { padding: 0; margin: 0; list-style: none; }
   color: var(--color-ink-soft);
 }
 .trust-item svg { width: 20px; height: 20px; color: var(--color-primary); flex-shrink: 0; }
+
+/* ---------- Department shortcut bar ---------- */
+.dept-bar { padding: 40px 0 0; }
+.dept-bar-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.dept-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  transition: transform 0.15s ease;
+}
+.dept-item:hover { transform: translateY(-3px); }
+.dept-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+.dept-icon svg { width: 22px; height: 22px; }
+.dept-item-all .dept-icon { background: var(--color-primary); color: #fff; }
+
+/* ---------- Trust section with hospital photo ---------- */
+.trust-photo-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  background: var(--color-bg-soft);
+  border-radius: 24px;
+  padding: 48px;
+}
+.trust-photo-content h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 24px; }
+.trust-checklist { display: flex; flex-direction: column; gap: 18px; }
+.trust-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.trust-checklist li svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-primary);
+  background: rgba(44,69,82,0.08);
+  border-radius: 50%;
+  padding: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.trust-checklist li strong { display: block; font-size: 0.98rem; color: var(--color-ink); }
+.trust-checklist li span { font-size: 0.86rem; color: var(--color-ink-soft); }
+.trust-photo-image {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4 / 3;
+}
+.trust-photo-image img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 760px) {
+  .trust-photo-card { grid-template-columns: 1fr; padding: 28px; gap: 28px; }
+  .dept-bar-grid { flex-wrap: wrap; }
+  .dept-item { flex: 1 1 30%; }
+}
 
 /* ---------- Cards grid (services / departments) ---------- */
 .grid {
