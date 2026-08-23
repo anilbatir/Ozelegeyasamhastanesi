@@ -1,12 +1,20 @@
-/* Premium cursor interactions — desktop/fine-pointer only */
+/* Premium hero motion + cursor parallax */
 .hero{--mx:50%;--my:38%}
 .hero::selection{background:rgba(18,98,198,.16)}
 .hero-visual,.doctor-cutout,.orb,.ring,.float-card,.hero .btn,.doctor-card{will-change:transform}
-.hero-visual::before{content:"";position:absolute;inset:-10%;z-index:0;pointer-events:none;background:radial-gradient(circle at var(--mx) var(--my),rgba(68,171,225,.20),rgba(68,171,225,.07) 18%,transparent 44%);opacity:.75;transition:opacity .25s ease}
-.doctor-cutout,.orb,.ring,.float-card{transition:transform .18s cubic-bezier(.2,.75,.2,1)}
+
+/* iPad/telefon dahil her cihazda görülen çok hafif 'canlı' hero hareketi */
+.hero-visual{animation:heroBreath 6s ease-in-out infinite}
+@keyframes heroBreath{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-7px,0)}
+}
+.hero-visual::before{content:"";position:absolute;inset:-10%;z-index:0;pointer-events:none;background:radial-gradient(circle at var(--mx) var(--my),rgba(68,171,225,.22),rgba(68,171,225,.08) 18%,transparent 44%);opacity:.82;transition:opacity .25s ease}
+.doctor-cutout,.orb,.ring,.float-card{transition:transform .16s cubic-bezier(.2,.75,.2,1)}
 .hero .btn{transition:transform .16s ease,box-shadow .2s ease}
 .doctor-card{transform-style:preserve-3d;transition:transform .2s ease,box-shadow .2s ease}
 
+/* Mouse / trackpad bulunan cihazlarda gerçek parallax */
 @media (hover:hover) and (pointer:fine){
   .hero.is-pointer-active .doctor-cutout{transform:translate3d(var(--doctor-x,0),var(--doctor-y,0),0)}
   .hero.is-pointer-active .orb.one{transform:translate3d(var(--orb1-x,0),var(--orb1-y,0),0)}
@@ -16,10 +24,11 @@
   .hero.is-pointer-active .float-card.top{transform:translate3d(var(--card1-x,0),var(--card1-y,0),0)}
   .hero.is-pointer-active .float-card.bottom{transform:translate3d(var(--card2-x,0),var(--card2-y,0),0)}
   .magnetic{transform:translate3d(var(--mag-x,0),var(--mag-y,0),0)}
-  .doctor-card.motion-tilt{transform:perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) translateY(-4px)}
+  .doctor-card.motion-tilt{transform:perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) translateY(-3px)}
 }
 
 @media (prefers-reduced-motion:reduce){
+  .hero-visual{animation:none!important}
   .hero-visual::before{display:none}
   .doctor-cutout,.orb,.ring,.float-card,.hero .btn,.doctor-card{transition:none!important;transform:none!important}
 }
