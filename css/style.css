@@ -15,7 +15,7 @@
   --shadow-sm: 0 2px 8px rgba(20, 34, 42, 0.07);
   --shadow-md: 0 12px 32px rgba(20, 34, 42, 0.12);
   --radius: 14px;
-  --font-heading: 'Fraunces', 'Georgia', serif;
+  --font-heading: 'Space Mono', 'Courier New', monospace;
   --font-body: 'Inter', 'Segoe UI', sans-serif;
   --header-height: 76px;
 }
@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
   margin: 0 0 0.6em;
   color: var(--color-ink);
@@ -246,12 +246,13 @@ ul { padding: 0; margin: 0; list-style: none; }
   backdrop-filter: blur(4px);
 }
 .hero h1 {
-  font-size: clamp(2.3rem, 4.4vw, 3.4rem);
-  font-weight: 500;
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 20px;
   color: #fff;
 }
-.hero h1 span { color: var(--color-accent); font-style: italic; }
+.hero h1 span { color: var(--color-accent); }
 .hero p.lead {
   font-size: 1.08rem;
   max-width: 480px;
@@ -289,17 +290,30 @@ ul { padding: 0; margin: 0; list-style: none; }
   justify-content: center;
 }
 .hero-photo {
+  position: relative;
+  z-index: 1;
   width: 88%;
   max-width: 460px;
   object-fit: contain;
   object-position: bottom center;
   filter: drop-shadow(0 20px 40px rgba(10, 18, 22, 0.35));
 }
+.hero-stethoscope {
+  position: absolute;
+  top: -4%;
+  right: 2%;
+  width: 42%;
+  max-width: 220px;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
 .hero-float-card {
   position: absolute;
-  background: rgba(255,255,255,0.16);
-  border: 1px solid rgba(255,255,255,0.28);
-  backdrop-filter: blur(10px);
+  background: rgba(20, 30, 36, 0.38);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 14px;
   padding: 14px 16px;
   display: flex;
@@ -671,6 +685,7 @@ ul { padding: 0; margin: 0; list-style: none; }
   .hero .hero-stats { justify-content: center; }
   .hero .hero-photo-wrap { order: -1; height: auto; margin: 0 auto; }
   .hero .hero-photo { max-width: 320px; }
+  .hero-stethoscope { display: none; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
