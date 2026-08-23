@@ -129,7 +129,6 @@ function initHeroHeadlineRotator() {
   const titleEl = document.querySelector('[data-hero-title]');
   const leadEl = document.querySelector('[data-hero-lead]');
   const eyebrowEl = document.querySelector('[data-hero-eyebrow]');
-  const photoEl = document.querySelector('[data-hero-photo]');
   if (!content || !titleEl || !leadEl) return;
 
   const slides = [
@@ -137,33 +136,21 @@ function initHeroHeadlineRotator() {
       eyebrow: '7/24 Acil ve Uzman Hekim Desteği',
       title: 'Dünya standartında bakım, <span>evinize yakın</span>',
       lead: 'Önleyici sağlık kontrollerinden ileri cerrahiye; ekibimiz güvenli, zamanında ve şefkatli bakım sunar.',
-      image: 'img/hero/hacer-cutout.png',
-      imageAlt: 'Uzm. Dr. Hacer Ağça',
-      imageVariant: 'doctor',
     },
     {
       eyebrow: 'SGK ve Özel Sigortalarla Anlaşmalıyız',
       title: 'SGK anlaşmamız <span>vardır</span>',
       lead: 'SGK ve özel sağlık sigortası kurumlarıyla anlaşmalı olarak, ek ücret endişesi olmadan kaliteli sağlık hizmetine erişebilirsiniz.',
-      image: 'img/hastane/bina.jpg',
-      imageAlt: 'Özel Ege Yaşam Hastanesi binası',
-      imageVariant: 'building',
     },
     {
       eyebrow: 'Modern Teknoloji, Güvenilir Bakım',
       title: 'Sağlık, güven ve <span>teknoloji</span> bir arada',
       lead: 'İleri tanı ve görüntüleme teknolojileri ile modern, güvenilir ve şefkatli bir sağlık deneyimi sunuyoruz.',
-      image: 'img/hero/hacer-cutout.png',
-      imageAlt: 'Uzm. Dr. Hacer Ağça',
-      imageVariant: 'doctor',
     },
     {
       eyebrow: 'Uzman Kadromuzla Tanışın',
       title: '27+ uzman hekimle <span>7/24 yanınızdayız</span>',
       lead: 'Farklı branşlarda deneyimli hekim kadromuz ve acil servisimizle kesintisiz sağlık hizmeti sunuyoruz.',
-      image: 'img/hero/hacer-cutout.png',
-      imageAlt: 'Uzm. Dr. Hacer Ağça',
-      imageVariant: 'doctor',
     },
   ];
 
@@ -177,21 +164,14 @@ function initHeroHeadlineRotator() {
     }
     titleEl.innerHTML = data.title;
     leadEl.textContent = data.lead;
-    if (photoEl) {
-      photoEl.src = data.image;
-      photoEl.alt = data.imageAlt;
-      photoEl.classList.toggle('is-building', data.imageVariant === 'building');
-    }
   }
 
   function nextSlide() {
     content.classList.add('is-swapping');
-    if (photoEl) photoEl.classList.add('is-swapping');
     window.setTimeout(() => {
       index = (index + 1) % slides.length;
       applySlide(index);
       content.classList.remove('is-swapping');
-      if (photoEl) photoEl.classList.remove('is-swapping');
     }, 350);
   }
 

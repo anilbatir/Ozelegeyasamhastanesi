@@ -282,9 +282,27 @@ ul { padding: 0; margin: 0; list-style: none; }
 .hero .btn-accent { box-shadow: var(--shadow-sm); }
 .hero-stats {
   display: flex;
-  gap: 36px;
+  gap: 28px;
   flex-wrap: wrap;
 }
+.hero-stats > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(44,69,82,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+.hero-stat-icon svg { width: 18px; height: 18px; }
+.hero-stat-text { display: flex; flex-direction: column; }
 .hero-stats div strong {
   display: block;
   font-family: var(--font-heading);
@@ -335,13 +353,6 @@ ul { padding: 0; margin: 0; list-style: none; }
   object-fit: contain;
   object-position: bottom center;
   filter: drop-shadow(0 20px 40px rgba(44, 69, 82, 0.18));
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-.hero-photo.is-swapping { opacity: 0; transform: translateY(8px); }
-.hero-photo.is-building {
-  object-fit: cover;
-  border-radius: 22px;
-  box-shadow: var(--shadow-md);
 }
 .hero-float-card {
   position: absolute;
@@ -365,11 +376,20 @@ ul { padding: 0; margin: 0; list-style: none; }
 .hero-float-top {
   top: 34%;
   right: -8%;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
 }
-.hero-float-top strong { font-size: 0.92rem; color: var(--color-primary-dark); }
+.hero-float-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(44,69,82,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+.hero-float-icon svg { width: 18px; height: 18px; }
+.hero-float-top strong { display: block; font-size: 0.92rem; color: var(--color-primary-dark); }
 .hero-float-top span { font-size: 0.78rem; color: var(--color-ink-soft); }
 .hero-float-bottom {
   bottom: 6%;
@@ -446,44 +466,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .dept-icon svg { width: 22px; height: 22px; }
 .dept-item-all .dept-icon { background: var(--color-primary); color: #fff; }
 
-/* ---------- Trust section with hospital photo ---------- */
-.trust-photo-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 48px;
-  background: var(--color-bg-soft);
-  border-radius: 24px;
-  padding: 48px;
-}
-.trust-photo-content h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 24px; }
-.trust-checklist { display: flex; flex-direction: column; gap: 18px; }
-.trust-checklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-.trust-checklist li svg {
-  width: 22px;
-  height: 22px;
-  color: var(--color-primary);
-  background: rgba(44,69,82,0.08);
-  border-radius: 50%;
-  padding: 4px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-.trust-checklist li strong { display: block; font-size: 0.98rem; color: var(--color-ink); }
-.trust-checklist li span { font-size: 0.86rem; color: var(--color-ink-soft); }
-.trust-photo-image {
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 4 / 3;
-}
-.trust-photo-image img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 760px) {
-  .trust-photo-card { grid-template-columns: 1fr; padding: 28px; gap: 28px; }
   .dept-bar-grid { flex-wrap: wrap; }
   .dept-item { flex: 1 1 30%; }
 }
