@@ -2,7 +2,7 @@
 
 .about-hero{position:relative;padding:64px clamp(24px,6vw,90px) 78px;min-height:480px;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .about-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;z-index:0}
-.about-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,38,.62) 0%,rgba(7,19,44,.5) 55%,rgba(6,16,38,.72) 100%);z-index:1}
+.about-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,38,.48) 0%,rgba(7,19,44,.32) 55%,rgba(6,16,38,.56) 100%);z-index:1}
 .about-hero-content{position:relative;z-index:2;max-width:720px;color:#fff}
 .about-breadcrumb{font-size:13px;color:#c6d5ec;margin-bottom:20px}
 .about-breadcrumb a{color:#fff;font-weight:600}
@@ -12,7 +12,7 @@
 .about-desc{font-size:15px;line-height:1.7;color:#c3cfe4;max-width:600px;margin:0}
 
 .about-badges-section{background:#f5f9fd;padding:36px clamp(24px,6vw,90px) 0}
-.about-badges{position:relative;margin-top:-72px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.about-badges{position:relative;z-index:5;margin-top:-72px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .about-badge{background:#fff;border:1px solid #e6edf4;border-radius:18px;padding:22px 18px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;box-shadow:0 16px 34px rgba(15,45,90,.1);font-size:14px;font-weight:700;color:#123a72;line-height:1.4}
 .about-badge-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e9f4ff;color:#1160c2}
 .about-badge-icon svg{width:22px;height:22px}
