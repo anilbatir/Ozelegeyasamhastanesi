@@ -335,18 +335,6 @@ ul { padding: 0; margin: 0; list-style: none; }
   object-position: bottom center;
   filter: drop-shadow(0 20px 40px rgba(44, 69, 82, 0.18));
 }
-.hero-stethoscope {
-  position: absolute;
-  top: -2%;
-  right: -4%;
-  width: 46%;
-  max-width: 240px;
-  object-fit: contain;
-  opacity: 0.4;
-  filter: blur(1.5px) saturate(0.85);
-  z-index: 0;
-  pointer-events: none;
-}
 .hero-float-card {
   position: absolute;
   z-index: 2;
@@ -729,7 +717,6 @@ ul { padding: 0; margin: 0; list-style: none; }
   .hero .hero-stats { justify-content: center; }
   .hero .hero-photo-wrap { order: -1; height: auto; margin: 0 auto; }
   .hero .hero-photo { max-width: 320px; }
-  .hero-stethoscope { display: none; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
