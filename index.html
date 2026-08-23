@@ -34,7 +34,7 @@
 <main>
 <section class="hero">
   <div class="hero-copy">
-    <div class="eyebrow">✓ &nbsp; SGK ve Özel Sigortalarla Anlaşmalıyız</div>
+    <button type="button" class="eyebrow eyebrow-link" data-open-modal="anlasmali-kurumlar">✓ &nbsp; SGK ve Özel Sigortalarla Anlaşmalıyız <b>›</b></button>
     <h1>Dünya standartlarında<br>bakım, <span>evinize yakın</span></h1>
     <p>Gelişmiş teknoloji ve uzman kadromuzla, sağlığınızı korumak için yanınızdayız.</p>
     <div class="hero-actions">
@@ -99,9 +99,56 @@
 <section id="appointment" class="appointment"><div><span class="kicker">RANDEVU</span><h2>Sağlığınız için ilk adımı atın.</h2><p>Randevu ve bilgi talepleriniz için çağrı merkezimizden bize ulaşabilirsiniz.</p></div><div class="appointment-buttons"><a class="btn primary" href="tel:+902322265656">0232 226 56 56</a><a class="btn secondary" href="iletisim.html#randevu">Randevu Talebi →</a></div></section>
 </main>
 
+<div class="modal-overlay" id="anlasmali-kurumlar" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="anlasmali-kurumlar-title">
+    <button type="button" class="modal-close" data-close-modal aria-label="Kapat">✕</button>
+    <h3 id="anlasmali-kurumlar-title">Anlaşmalı Kurumlar</h3>
+    <p class="modal-sub">SGK ile ve aşağıdaki özel sağlık sigortası şirketleri ve kurumlarla anlaşmalıyız.</p>
+    <ul class="modal-list">
+      <li class="modal-list-sgk">SGK (Sosyal Güvenlik Kurumu)</li>
+      <li>Mapfre Sigorta</li>
+      <li>Allianz Sigorta</li>
+      <li>T-Sigorta</li>
+      <li>Turkland Sigorta</li>
+      <li>Gulf Sigorta</li>
+      <li>GIG Sigorta</li>
+      <li>Halk Sigorta</li>
+      <li>Fortis Bank</li>
+      <li>Ankara Sigorta</li>
+      <li>Chubb Sigorta</li>
+      <li>Generali Sigorta</li>
+      <li>Zurich Sigorta</li>
+      <li>Sompo Japan Sigorta</li>
+      <li>HDI Sigorta</li>
+      <li>Ray Sigorta</li>
+      <li>Katılım Emeklilik</li>
+      <li>Ethica Sigorta</li>
+      <li>Vakıf Emeklilik</li>
+      <li>Türk Nippon Sigorta</li>
+      <li>Neova Sigorta</li>
+      <li>QNB Sigorta</li>
+    </ul>
+  </div>
+</div>
+
 <footer id="contact"><img src="img/logo/ege-yasam-logo.png" alt="Özel Ege Yaşam Hastanesi"><div><strong>Özel Ege Yaşam Hastanesi</strong><p>Karabağlar / İzmir</p></div><div><strong>İletişim</strong><p>0232 226 56 56</p></div></footer>
 
 <script>const btn=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');btn?.addEventListener('click',()=>nav.classList.toggle('open'));</script>
+<script>
+(() => {
+  const openers = document.querySelectorAll('[data-open-modal]');
+  openers.forEach(el => el.addEventListener('click', () => {
+    const modal = document.getElementById(el.getAttribute('data-open-modal'));
+    if (modal) { modal.hidden = false; document.body.style.overflow = 'hidden'; }
+  }));
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    const close = () => { overlay.hidden = true; document.body.style.overflow = ''; };
+    overlay.querySelectorAll('[data-close-modal]').forEach(btn => btn.addEventListener('click', close));
+    overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !overlay.hidden) close(); });
+  });
+})();
+</script>
 <script src="js/motion.js" defer></script>
 <script src="js/scroll-motion.js" defer></script>
 </body>
