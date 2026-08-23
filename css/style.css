@@ -331,8 +331,8 @@ ul { padding: 0; margin: 0; list-style: none; }
 .hero-float-card {
   position: absolute;
   z-index: 2;
-  background: rgba(20, 30, 36, 0.72);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255,255,255,0.6);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 14px;
@@ -341,29 +341,30 @@ ul { padding: 0; margin: 0; list-style: none; }
   align-items: center;
   gap: 12px;
   max-width: 240px;
-  color: #fff;
+  color: var(--color-primary-dark);
+  box-shadow: 0 12px 28px rgba(10, 18, 22, 0.22);
 }
 .hero-float-top {
-  top: 6%;
-  right: -4%;
+  top: 34%;
+  right: -8%;
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
 }
-.hero-float-top strong { font-size: 0.92rem; color: #fff; }
-.hero-float-top span { font-size: 0.78rem; color: rgba(255,255,255,0.78); }
+.hero-float-top strong { font-size: 0.92rem; color: var(--color-primary-dark); }
+.hero-float-top span { font-size: 0.78rem; color: var(--color-ink-soft); }
 .hero-float-bottom {
-  bottom: 2%;
-  left: -6%;
+  bottom: 6%;
+  left: -10%;
 }
 .hero-float-bottom .dot {
   width: 10px; height: 10px; border-radius: 50%;
-  background: #6cf0c2;
-  box-shadow: 0 0 0 4px rgba(108,240,194,0.22);
+  background: #2fae83;
+  box-shadow: 0 0 0 4px rgba(47,174,131,0.18);
   flex-shrink: 0;
 }
-.hero-float-bottom strong { display: block; font-size: 0.9rem; color: #fff; }
-.hero-float-bottom span { font-size: 0.78rem; color: rgba(255,255,255,0.78); }
+.hero-float-bottom strong { display: block; font-size: 0.9rem; color: var(--color-primary-dark); }
+.hero-float-bottom span { font-size: 0.78rem; color: var(--color-ink-soft); }
 
 /* ---------- Strip / Trust bar ---------- */
 .trust-strip {
