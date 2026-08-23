@@ -49,9 +49,9 @@ function initHeroAurora() {
   const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
 
   const layers = [
-    { hue: 175, offset: 0, amplitude: 70, frequency: 0.005, speed: 0.0009, opacity: 0.22 },
-    { hue: 195, offset: 70, amplitude: 90, frequency: 0.0035, speed: 0.0013, opacity: 0.16 },
-    { hue: 165, offset: 140, amplitude: 55, frequency: 0.006, speed: 0.0007, opacity: 0.14 },
+    { hue: 214, offset: 0, amplitude: 70, frequency: 0.005, speed: 0.0009, opacity: 0.55 },
+    { hue: 168, offset: 70, amplitude: 90, frequency: 0.0035, speed: 0.0013, opacity: 0.4 },
+    { hue: 222, offset: 140, amplitude: 55, frequency: 0.006, speed: 0.0007, opacity: 0.35 },
   ];
 
   function resize() {
@@ -106,9 +106,9 @@ function initHeroAurora() {
       ctx.lineTo(width, height);
       ctx.closePath();
       const grad = ctx.createLinearGradient(0, height * 0.2, 0, height);
-      grad.addColorStop(0, `hsla(${layer.hue}, 70%, 65%, ${layer.opacity})`);
-      grad.addColorStop(0.5, `hsla(${layer.hue}, 60%, 55%, ${layer.opacity * 0.6})`);
-      grad.addColorStop(1, `hsla(${layer.hue}, 50%, 45%, 0)`);
+      grad.addColorStop(0, `hsla(${layer.hue}, 65%, 88%, ${layer.opacity})`);
+      grad.addColorStop(0.5, `hsla(${layer.hue}, 55%, 84%, ${layer.opacity * 0.6})`);
+      grad.addColorStop(1, `hsla(${layer.hue}, 45%, 90%, 0)`);
       ctx.fillStyle = grad;
       ctx.fill();
     });
