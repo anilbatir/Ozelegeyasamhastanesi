@@ -337,11 +337,13 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 .hero-stethoscope {
   position: absolute;
-  top: -4%;
-  right: 2%;
-  width: 42%;
-  max-width: 220px;
-  opacity: 0.55;
+  top: -2%;
+  right: -4%;
+  width: 46%;
+  max-width: 240px;
+  object-fit: contain;
+  opacity: 0.4;
+  filter: blur(1.5px) saturate(0.85);
   z-index: 0;
   pointer-events: none;
 }
