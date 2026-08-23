@@ -145,19 +145,12 @@ ul { padding: 0; margin: 0; list-style: none; }
   font-size: 1.05rem;
   color: var(--color-primary-dark);
 }
-.brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
 }
-.brand-mark svg { width: 22px; height: 22px; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-text small { font-family: var(--font-body); font-weight: 500; font-size: 0.68rem; color: var(--color-ink-soft); letter-spacing: 0.04em; }
+.footer-brand .brand-logo { height: 38px; }
 
 .main-nav ul {
   display: flex;
