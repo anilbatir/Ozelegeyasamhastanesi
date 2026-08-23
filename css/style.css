@@ -217,7 +217,11 @@ ul { padding: 0; margin: 0; list-style: none; }
   padding: 96px 0 0;
   overflow: hidden;
   color: #fff;
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-light) 130%);
+  background:
+    radial-gradient(1100px 780px at 76% 60%, var(--color-primary-light) 0%, rgba(107,147,168,0) 62%),
+    radial-gradient(900px 700px at 8% 4%, rgba(10,18,22,0.55) 0%, rgba(10,18,22,0) 55%),
+    radial-gradient(900px 700px at 4% 100%, rgba(10,18,22,0.6) 0%, rgba(10,18,22,0) 55%),
+    linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
 }
 .hero-grid {
   display: grid;
