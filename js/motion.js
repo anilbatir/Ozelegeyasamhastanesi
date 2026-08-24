@@ -123,10 +123,10 @@
   visual.prepend(media);
 
   const slides = [
-    {mode:'doctor',title:'Dünya standartlarında<br>bakım, <span>evinize yakın</span>',description:'Gelişmiş teknoloji ve uzman kadromuzla, sağlığınızı korumak için yanınızdayız.',top:['27+ Uzman Hekim','Farklı branşlarda deneyimli hekim kadrosu'],bottom:['Acil Durumlarda Yanınızdayız','7/24 aktif hizmet']},
-    {mode:'photo',image:'img/hero/slide-surgery.webp',title:'Güvenli cerrahi,<br><span>deneyimli eller.</span>',description:'Modern cerrahi yaklaşımımız ve ileri teknoloji desteğimizle güvenli tedavi süreçleri sunuyoruz.',top:['Modern Ameliyathane','Teknoloji destekli cerrahi altyapı'],bottom:['Deneyimli Cerrahi Ekip','Hasta güvenliği odaklı yaklaşım']},
-    {mode:'photo',image:'img/hero/slide-mother-child.webp',title:'Hayatın en özel<br>anlarında <span>yanınızdayız.</span>',description:'Kadın doğum ve çocuk sağlığı alanlarında anne ve bebeğin sağlığını, sevgi ve özenle koruyoruz.',top:['Kadın Doğum & Çocuk Sağlığı','Anne ve bebeğe bütüncül yaklaşım'],bottom:['Şefkatli Bakım','Uzman ekip, güvenli takip']},
-    {mode:'photo',image:'img/hero/slide-emergency.webp',title:'Sağlığınız için<br><span>7/24 buradayız.</span>',description:'Deneyimli acil servis ekibimiz ve tam donanımlı ünitemizle, günün her saati yanınızdayız.',top:['7/24 Acil Servis','Kesintisiz müdahale imkânı'],bottom:['Acil Servis Aktif','Hazır ekip ve güçlü altyapı']}
+    {mode:'photo',image:'img/hero/slide-doctor-hallway.jpg',title:'Dünya standartlarında<br>bakım, <span>evinize yakın</span>',description:'Gelişmiş teknoloji ve uzman kadromuzla, sağlığınızı korumak için yanınızdayız.',top:['27+ Uzman Hekim','Farklı branşlarda deneyimli hekim kadrosu'],bottom:['Acil Durumlarda Yanınızdayız','7/24 aktif hizmet']},
+    {mode:'photo',image:'img/hero/slide-surgery.jpg',title:'Güvenli cerrahi,<br><span>deneyimli eller.</span>',description:'Modern cerrahi yaklaşımımız ve ileri teknoloji desteğimizle güvenli tedavi süreçleri sunuyoruz.',top:['Modern Ameliyathane','Teknoloji destekli cerrahi altyapı'],bottom:['Deneyimli Cerrahi Ekip','Hasta güvenliği odaklı yaklaşım']},
+    {mode:'photo',image:'img/hero/slide-mother-child.jpg',title:'Hayatın en özel<br>anlarında <span>yanınızdayız.</span>',description:'Kadın doğum ve çocuk sağlığı alanlarında anne ve bebeğin sağlığını, sevgi ve özenle koruyoruz.',top:['Kadın Doğum & Çocuk Sağlığı','Anne ve bebeğe bütüncül yaklaşım'],bottom:['Şefkatli Bakım','Uzman ekip, güvenli takip']},
+    {mode:'photo',image:'img/hero/slide-emergency.jpg',title:'Sağlığınız için<br><span>7/24 buradayız.</span>',description:'Deneyimli acil servis ekibimiz ve tam donanımlı ünitemizle, günün her saati yanınızdayız.',top:['7/24 Acil Servis','Kesintisiz müdahale imkânı'],bottom:['Acil Servis Aktif','Hazır ekip ve güçlü altyapı']}
   ];
 
   slides.filter(s=>s.image).forEach(s=>{ const i=new Image(); i.src=s.image; });
