@@ -128,8 +128,8 @@
   const slides = [
     {mode:'photo',image:'img/hero/slide-doctor-hallway.jpg',pos:'68% 27%',title:'Dünya standartlarında<br>bakım, <span>evinize yakın</span>',description:'Gelişmiş teknoloji ve uzman kadromuzla, sağlığınızı korumak için yanınızdayız.',top:['27+ Uzman Hekim','Farklı branşlarda deneyimli hekim kadrosu'],bottom:['Acil Durumlarda Yanınızdayız','7/24 aktif hizmet']},
     {mode:'photo',image:'img/hero/slide-surgery.jpg',pos:'62% 32%',title:'Güvenli cerrahi,<br><span>deneyimli eller.</span>',description:'Modern cerrahi yaklaşımımız ve ileri teknoloji desteğimizle güvenli tedavi süreçleri sunuyoruz.',top:['Modern Ameliyathane','Teknoloji destekli cerrahi altyapı'],bottom:['Deneyimli Cerrahi Ekip','Hasta güvenliği odaklı yaklaşım'],cardPos:{top:{top:'58%',right:'1%'},bottom:{bottom:'-4%',left:'0%'}}},
-    {mode:'photo',image:'img/hero/slide-mother-child.jpg',pos:'64% 30%',title:'Hayatın en özel<br>anlarında <span>yanınızdayız.</span>',description:'Kadın doğum ve çocuk sağlığı alanlarında anne ve bebeğin sağlığını, sevgi ve özenle koruyoruz.',top:['Kadın Doğum & Çocuk Sağlığı','Anne ve bebeğe bütüncül yaklaşım'],bottom:['Şefkatli Bakım','Uzman ekip, güvenli takip'],cardPos:{top:{top:'50%',right:'3%'}}},
-    {mode:'photo',image:'img/hero/slide-emergency.jpg',pos:'66% 35%',title:'Sağlığınız için<br><span>7/24 buradayız.</span>',description:'Deneyimli acil servis ekibimiz ve tam donanımlı ünitemizle, günün her saati yanınızdayız.',top:['7/24 Acil Servis','Kesintisiz müdahale imkânı'],bottom:['Acil Servis Aktif','Hazır ekip ve güçlü altyapı'],cardPos:{top:{top:'12%',right:'1%'}}}
+    {mode:'photo',image:'img/hero/slide-mother-child.jpg',pos:'64% 30%',accent:'#c93368',title:'Hayatın en özel<br>anlarında <span>yanınızdayız.</span>',description:'Kadın doğum ve çocuk sağlığı alanlarında anne ve bebeğin sağlığını, sevgi ve özenle koruyoruz.',top:['Kadın Doğum & Çocuk Sağlığı','Anne ve bebeğe bütüncül yaklaşım'],bottom:['Şefkatli Bakım','Uzman ekip, güvenli takip'],cardPos:{top:{top:'50%',right:'3%'}}},
+    {mode:'photo',image:'img/hero/slide-emergency.jpg',pos:'66% 35%',accent:'#d1432f',title:'Sağlığınız için<br><span>7/24 buradayız.</span>',description:'Deneyimli acil servis ekibimiz ve tam donanımlı ünitemizle, günün her saati yanınızdayız.',top:['7/24 Acil Servis','Kesintisiz müdahale imkânı'],bottom:['Acil Servis Aktif','Hazır ekip ve güçlü altyapı'],cardPos:{top:{top:'12%',right:'1%'}}}
   ];
 
   slides.filter(s=>s.image).forEach(s=>{ const i=new Image(); i.src=s.image; });
@@ -178,6 +178,7 @@
     const swap = () => {
       title.innerHTML=slide.title;
       description.textContent=slide.description;
+      hero.style.setProperty('--slide-accent', slide.accent||'#145dc3');
       setCard(topCard,slide.top,false);
       setCard(bottomCard,slide.bottom,true);
       [topCard,bottomCard].forEach(c=>{c.style.top='';c.style.right='';c.style.bottom='';c.style.left='';});
