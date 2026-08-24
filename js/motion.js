@@ -101,26 +101,28 @@
     .hero-copy h1,.hero-copy>p,.float-card{transition:opacity .38s ease,transform .55s cubic-bezier(.2,.72,.2,1)}
     .hero.is-changing .hero-copy h1,.hero.is-changing .hero-copy>p{opacity:0;transform:translateY(10px)}
     .hero.is-changing .float-card{opacity:0;transform:translateY(8px)}
-    .hero-slide-media{position:absolute;inset:18px -2% 8px 0;z-index:3;border-radius:38px;overflow:hidden;opacity:0;transform:scale(1.018);transition:opacity .8s ease,transform 5s ease;background:#dceef8 center/cover no-repeat;box-shadow:0 24px 55px rgba(30,72,110,.10)}
-    .hero-slide-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,250,254,.12),rgba(255,255,255,0) 38%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(5,46,92,.08));pointer-events:none}
+    .hero-slide-media{position:absolute;inset:0;z-index:1;overflow:hidden;opacity:0;transform:scale(1.018);transition:opacity .8s ease,transform 5s ease;background:#dceef8 center/cover no-repeat}
+    .hero-slide-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 30%,rgba(255,255,255,.55) 48%,rgba(255,255,255,.08) 66%,rgba(255,255,255,0) 82%);pointer-events:none}
     .hero.scene-photo .hero-slide-media{opacity:1;transform:scale(1.002)}
+    .hero.scene-photo::before,.hero.scene-photo::after{opacity:0}
     .hero.scene-photo .doctor-cutout,.hero.scene-photo .orb,.hero.scene-photo .ring{opacity:0;pointer-events:none}
     .hero .doctor-cutout,.hero .orb,.hero .ring{transition:opacity .55s ease,transform .35s ease}
+    .hero::before,.hero::after{transition:opacity .6s ease}
     .hero-slider-nav{position:absolute;right:clamp(28px,7vw,112px);bottom:34px;z-index:18;display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(210,225,239,.9);backdrop-filter:blur(12px);box-shadow:0 10px 26px rgba(27,72,112,.08)}
     .hero-slider-nav button{width:28px;height:28px;border:0;border-radius:50%;background:transparent;color:#6f8196;font:700 11px/1 Inter,system-ui;cursor:pointer;transition:.2s ease}
     .hero-slider-nav button.is-active{background:#0f5fc4;color:#fff}
     .hero-slider-progress{width:90px;height:2px;border-radius:99px;background:rgba(32,83,139,.15);overflow:hidden}
     .hero-slider-progress span{display:block;width:100%;height:100%;background:#0f5fc4;transform-origin:left;animation:heroProgress 5s linear forwards}
     @keyframes heroProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-    @media(max-width:900px){.hero-slide-media{inset:8px 0 0;border-radius:28px}.hero-slider-nav{right:50%;transform:translateX(50%);bottom:18px}.hero.scene-photo .hero-visual{min-height:430px}}
-    @media(max-width:560px){.hero-slider-progress{width:62px}.hero-slider-nav{bottom:10px}.hero-slide-media{border-radius:22px}}
+    @media(max-width:900px){.hero-slider-nav{right:50%;transform:translateX(50%);bottom:18px}.hero-slide-media::after{background:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 38%,rgba(255,255,255,.4) 60%,rgba(255,255,255,0) 78%)}}
+    @media(max-width:560px){.hero-slider-progress{width:62px}.hero-slider-nav{bottom:10px}}
     @media(prefers-reduced-motion:reduce){.hero-slide-media,.hero-copy h1,.hero-copy>p,.float-card{transition:none!important}.hero-slider-progress span{animation:none!important}}
   `;
   document.head.appendChild(style);
 
   const media = document.createElement('div');
   media.className = 'hero-slide-media';
-  visual.prepend(media);
+  hero.prepend(media);
 
   const slides = [
     {mode:'photo',image:'img/hero/slide-doctor-hallway.jpg',pos:'59% 22%',title:'Dünya standartlarında<br>bakım, <span>evinize yakın</span>',description:'Gelişmiş teknoloji ve uzman kadromuzla, sağlığınızı korumak için yanınızdayız.',top:['27+ Uzman Hekim','Farklı branşlarda deneyimli hekim kadrosu'],bottom:['Acil Durumlarda Yanınızdayız','7/24 aktif hizmet']},
