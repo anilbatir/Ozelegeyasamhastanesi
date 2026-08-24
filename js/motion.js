@@ -102,7 +102,7 @@
     .hero.is-changing .hero-copy h1,.hero.is-changing .hero-copy>p{opacity:0;transform:translateY(10px)}
     .hero.is-changing .float-card{opacity:0;transform:translateY(8px)}
     .hero-slide-media{position:absolute;inset:0;z-index:1;overflow:hidden;opacity:0;transform:scale(1.018);transition:opacity .8s ease,transform 5s ease;background:#dceef8 center/cover no-repeat}
-    .hero-slide-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 30%,rgba(255,255,255,.55) 48%,rgba(255,255,255,.08) 66%,rgba(255,255,255,0) 82%);pointer-events:none}
+    .hero-slide-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 20%,rgba(255,255,255,.5) 36%,rgba(255,255,255,.14) 54%,rgba(255,255,255,0) 70%);pointer-events:none}
     .hero.scene-photo .hero-slide-media{opacity:1;transform:scale(1.002)}
     .hero.scene-photo::before,.hero.scene-photo::after{opacity:0}
     .hero.scene-photo .doctor-cutout,.hero.scene-photo .orb,.hero.scene-photo .ring{opacity:0;pointer-events:none}
