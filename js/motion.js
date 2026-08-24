@@ -99,6 +99,7 @@
   style.textContent = `
     .hero{--slide-accent:#145dc3}
     .hero-copy h1,.hero-copy>p,.float-card{transition:opacity .38s ease,transform .55s cubic-bezier(.2,.72,.2,1)}
+    .float-card{transition:opacity .38s ease,transform .55s cubic-bezier(.2,.72,.2,1),top .5s ease,right .5s ease,bottom .5s ease,left .5s ease}
     .hero.is-changing .hero-copy h1,.hero.is-changing .hero-copy>p{opacity:0;transform:translateY(10px)}
     .hero.is-changing .float-card{opacity:0;transform:translateY(8px)}
     .hero-slide-media{position:absolute;inset:0;z-index:1;overflow:hidden;opacity:0;transform:scale(1.018);transition:opacity .8s ease,transform 5s ease;background:#dceef8 center/cover no-repeat}
@@ -126,9 +127,9 @@
 
   const slides = [
     {mode:'photo',image:'img/hero/slide-doctor-hallway.jpg',pos:'68% 27%',title:'Dünya standartlarında<br>bakım, <span>evinize yakın</span>',description:'Gelişmiş teknoloji ve uzman kadromuzla, sağlığınızı korumak için yanınızdayız.',top:['27+ Uzman Hekim','Farklı branşlarda deneyimli hekim kadrosu'],bottom:['Acil Durumlarda Yanınızdayız','7/24 aktif hizmet']},
-    {mode:'photo',image:'img/hero/slide-surgery.jpg',pos:'62% 32%',title:'Güvenli cerrahi,<br><span>deneyimli eller.</span>',description:'Modern cerrahi yaklaşımımız ve ileri teknoloji desteğimizle güvenli tedavi süreçleri sunuyoruz.',top:['Modern Ameliyathane','Teknoloji destekli cerrahi altyapı'],bottom:['Deneyimli Cerrahi Ekip','Hasta güvenliği odaklı yaklaşım']},
-    {mode:'photo',image:'img/hero/slide-mother-child.jpg',pos:'64% 30%',title:'Hayatın en özel<br>anlarında <span>yanınızdayız.</span>',description:'Kadın doğum ve çocuk sağlığı alanlarında anne ve bebeğin sağlığını, sevgi ve özenle koruyoruz.',top:['Kadın Doğum & Çocuk Sağlığı','Anne ve bebeğe bütüncül yaklaşım'],bottom:['Şefkatli Bakım','Uzman ekip, güvenli takip']},
-    {mode:'photo',image:'img/hero/slide-emergency.jpg',pos:'66% 35%',title:'Sağlığınız için<br><span>7/24 buradayız.</span>',description:'Deneyimli acil servis ekibimiz ve tam donanımlı ünitemizle, günün her saati yanınızdayız.',top:['7/24 Acil Servis','Kesintisiz müdahale imkânı'],bottom:['Acil Servis Aktif','Hazır ekip ve güçlü altyapı']}
+    {mode:'photo',image:'img/hero/slide-surgery.jpg',pos:'62% 32%',title:'Güvenli cerrahi,<br><span>deneyimli eller.</span>',description:'Modern cerrahi yaklaşımımız ve ileri teknoloji desteğimizle güvenli tedavi süreçleri sunuyoruz.',top:['Modern Ameliyathane','Teknoloji destekli cerrahi altyapı'],bottom:['Deneyimli Cerrahi Ekip','Hasta güvenliği odaklı yaklaşım'],cardPos:{top:{top:'58%',right:'1%'},bottom:{bottom:'-4%',left:'0%'}}},
+    {mode:'photo',image:'img/hero/slide-mother-child.jpg',pos:'64% 30%',title:'Hayatın en özel<br>anlarında <span>yanınızdayız.</span>',description:'Kadın doğum ve çocuk sağlığı alanlarında anne ve bebeğin sağlığını, sevgi ve özenle koruyoruz.',top:['Kadın Doğum & Çocuk Sağlığı','Anne ve bebeğe bütüncül yaklaşım'],bottom:['Şefkatli Bakım','Uzman ekip, güvenli takip'],cardPos:{top:{top:'50%',right:'3%'}}},
+    {mode:'photo',image:'img/hero/slide-emergency.jpg',pos:'66% 35%',title:'Sağlığınız için<br><span>7/24 buradayız.</span>',description:'Deneyimli acil servis ekibimiz ve tam donanımlı ünitemizle, günün her saati yanınızdayız.',top:['7/24 Acil Servis','Kesintisiz müdahale imkânı'],bottom:['Acil Servis Aktif','Hazır ekip ve güçlü altyapı'],cardPos:{top:{top:'12%',right:'1%'}}}
   ];
 
   slides.filter(s=>s.image).forEach(s=>{ const i=new Image(); i.src=s.image; });
@@ -179,6 +180,11 @@
       description.textContent=slide.description;
       setCard(topCard,slide.top,false);
       setCard(bottomCard,slide.bottom,true);
+      [topCard,bottomCard].forEach(c=>{c.style.top='';c.style.right='';c.style.bottom='';c.style.left='';});
+      if(slide.cardPos){
+        if(slide.cardPos.top) Object.assign(topCard.style, slide.cardPos.top);
+        if(slide.cardPos.bottom) Object.assign(bottomCard.style, slide.cardPos.bottom);
+      }
       if(slide.mode==='photo'){
         media.style.backgroundImage=`url('${slide.image}')`;
         media.style.backgroundPosition=slide.pos||'center';
