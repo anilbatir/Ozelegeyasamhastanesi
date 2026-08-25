@@ -32,7 +32,17 @@
 
 .appointment{max-width:1220px;margin:20px auto 70px}
 
+.dept-search{position:relative;max-width:460px}
+.dept-search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:19px;height:19px;color:#7b8ba3;pointer-events:none}
+.dept-search input{width:100%;padding:14px 18px 14px 48px;border-radius:999px;border:1px solid #d6e0ec;background:#fff;font:15px/1.4 Inter,system-ui;color:#0c2346;box-shadow:0 6px 18px rgba(20,60,100,.05)}
+.dept-search input:focus{outline:2px solid #1c63c6;outline-offset:1px}
+.dept-search input::placeholder{color:#93a3b8}
+
 .dept-list{padding:36px clamp(24px,6vw,90px) 20px}
+.dept-group{margin-bottom:38px}
+.dept-group:last-child{margin-bottom:0}
+.dept-group-title{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#1262c6;margin:0 0 18px}
+.dept-no-results{text-align:center;color:#5a6c85;font-size:15px;padding:40px 0}
 .dept-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .dept-card{background:#fff;border:1px solid #e2eaf2;border-radius:20px;padding:26px;box-shadow:0 10px 26px rgba(30,70,105,.05);transition:.2s ease;display:block}
 .dept-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(30,70,105,.1);border-color:#cfe0f3}

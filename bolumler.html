@@ -41,147 +41,172 @@
     <span class="kicker">UZMANLIK ALANLARI</span>
     <h1>Bölümlerimiz</h1>
     <p>Geniş uzmanlık yelpazemizle, tüm yaş gruplarına yönelik kapsamlı sağlık hizmeti sunuyoruz. 19 tıbbi branşta uzman kadromuzla yanınızdayız.</p>
+    <div class="dept-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="dept-search-input" placeholder="Bölüm ara (örn. Kardiyoloji, Ortopedi...)" aria-label="Bölüm ara">
+    </div>
   </div>
 </section>
 
 <section class="dept-list">
   <div class="container">
-    <div class="dept-cards">
 
-      <a class="dept-card" href="kardiyoloji.html">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12h-4l-3 7-4-14-3 7H2"/></svg></span>
-        <h3>Kardiyoloji</h3>
-        <p>Kalp ve damar hastalıklarında EKG, EKO ve efor testi ile ileri tanı ve takip hizmeti.</p>
-        <span class="dept-card-link">Bölüm Sayfası →</span>
-      </a>
+    <div id="dept-no-results" class="dept-no-results" hidden>Aramanızla eşleşen bölüm bulunamadı.</div>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3.2"/><path d="M6 21c0-3.5 2.7-6.3 6-6.3s6 2.8 6 6.3"/><path d="M12 14.7V21"/></svg></span>
-        <h3>Kadın Hastalıkları ve Doğum</h3>
-        <p>Gebelik takibi, doğum, jinekolojik muayene ve kadın sağlığı hizmetleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+    <div class="dept-group" data-group>
+      <h2 class="dept-group-title">Dahili Tıp Bilimleri</h2>
+      <div class="dept-cards">
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M7 21v-2a5 5 0 0 1 10 0v2"/><path d="M9 3.5c0-1 .8-1.5 1.5-1M15 3.5c0-1-.8-1.5-1.5-1"/></svg></span>
-        <h3>Çocuk Sağlığı ve Hastalıkları</h3>
-        <p>Yenidoğandan ergenliğe, çocukların büyüme takibi ve tedavi süreçleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="kardiyoloji.html" data-name="kardiyoloji">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12h-4l-3 7-4-14-3 7H2"/></svg></span>
+          <h3>Kardiyoloji</h3>
+          <p>Kalp ve damar hastalıklarında EKG, EKO ve efor testi ile ileri tanı ve takip hizmeti.</p>
+          <span class="dept-card-link">Bölüm Sayfası →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v6l-3 5a4 4 0 0 0 4 6h8a4 4 0 0 0 4-6l-3-5V3"/><path d="M7 3h10"/></svg></span>
-        <h3>Genel Cerrahi</h3>
-        <p>Açık ve laparoskopik cerrahi yöntemlerle geniş kapsamlı ameliyat hizmetleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html#randevu" data-name="nöroloji">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 2.8A3 3 0 0 0 6 13a3.2 3.2 0 0 0 3 3.2V19a2 2 0 0 0 4 0V7a3 3 0 0 0-4-3Z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 2.8A3 3 0 0 1 18 13a3.2 3.2 0 0 1-3 3.2V19a2 2 0 0 1-4 0"/></svg></span>
+          <h3>Nöroloji</h3>
+          <p>Baş ağrısı, felç, epilepsi gibi sinir sistemi hastalıklarında tanı ve tedavi.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c0 3-1 4-1 6s2 2 2 4-1 3-1 5M15 3c0 3 1 4 1 6s-2 2-2 4 1 3 1 5"/><circle cx="11.5" cy="12" r="2.3"/></svg></span>
-        <h3>Ortopedi ve Travmatoloji</h3>
-        <p>Kırık, çıkık, spor yaralanmaları ve eklem rahatsızlıklarında tedavi.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html#randevu" data-name="çocuk sağlığı ve hastalıkları">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M7 21v-2a5 5 0 0 1 10 0v2"/><path d="M9 3.5c0-1 .8-1.5 1.5-1M15 3.5c0-1-.8-1.5-1.5-1"/></svg></span>
+          <h3>Çocuk Sağlığı ve Hastalıkları</h3>
+          <p>Yenidoğandan ergenliğe, çocukların büyüme takibi ve tedavi süreçleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 2.8A3 3 0 0 0 6 13a3.2 3.2 0 0 0 3 3.2V19a2 2 0 0 0 4 0V7a3 3 0 0 0-4-3Z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 2.8A3 3 0 0 1 18 13a3.2 3.2 0 0 1-3 3.2V19a2 2 0 0 1-4 0"/></svg></span>
-        <h3>Nöroloji</h3>
-        <p>Baş ağrısı, felç, epilepsi gibi sinir sistemi hastalıklarında tanı ve tedavi.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html#randevu" data-name="göğüs hastalıkları">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M8 21c-2-1-3-3-3-6 0-3 2-5 2-8a3 3 0 0 1 6 0c0 3 2 5 2 8 0 3-1 5-3 6"/></svg></span>
+          <h3>Göğüs Hastalıkları</h3>
+          <p>Solunum yolu ve akciğer hastalıklarında tanı ve tedavi hizmetleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4a2.6 2.6 0 0 0-2.6 2.6 2.6 2.6 0 0 0-1.7 2.4A2.6 2.6 0 0 0 5.4 11a2.7 2.7 0 0 0 2.6 2.7v3.6a1.7 1.7 0 0 0 3.4 0V6.6A2.6 2.6 0 0 0 8 4Z"/><path d="M15 15.5 20 20.5M18.5 14 22 17.5"/></svg></span>
-        <h3>Beyin ve Sinir Cerrahisi</h3>
-        <p>Beyin, omurilik ve periferik sinir sistemi cerrahi tedavileri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html#randevu" data-name="psikiyatri">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a8 8 0 0 0-8 8c0 3 1.5 5 3 6.2V21l3-1.6c.6.1 1.3.2 2 .2a8 8 0 0 0 0-16Z"/><path d="M9 10c.5-1 1.5-1.5 2.5-1 .8.4 1 1.2.6 2-.4.7-1.1.6-1.6 1.3-.4.6-.2 1.4.5 1.7"/></svg></span>
+          <h3>Psikiyatri</h3>
+          <p>Ruh sağlığı değerlendirmesi ve tedavi hizmetleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
-        <h3>Göz Sağlığı ve Hastalıkları</h3>
-        <p>Katarakt, glokom ve görme kusurlarında muayene ve cerrahi tedavi.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html#randevu" data-name="beslenme ve diyetetik">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 3-5 6-5 9a5 5 0 0 0 10 0c0-3-2-6-5-9Z"/><path d="M12 12v9"/></svg></span>
+          <h3>Beslenme ve Diyetetik</h3>
+          <p>Kişiye özel beslenme programları ve diyet danışmanlığı.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a5 5 0 0 0-5 5c0 2 1 2.8 1 4.5A2.5 2.5 0 0 0 10.5 16c1 0 1.5-.6 1.5-1.5S11.5 13 11.5 12a2 2 0 1 1 4 0c0 3-3 3.5-3 6.5a3.5 3.5 0 0 0 3.5 3.5"/></svg></span>
-        <h3>Kulak Burun Boğaz</h3>
-        <p>İşitme, denge, sinüzit ve boğaz rahatsızlıklarında tanı ve tedavi.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html#randevu" data-name="dahiliye iç hastalıkları">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 9v3a5.5 5.5 0 0 0 11 0V9M10 21v-3.5M4.5 4v3M15.5 4v3"/><circle cx="18.5" cy="6" r="2"/></svg></span>
+          <h3>Dahiliye (İç Hastalıkları)</h3>
+          <p>Genel sağlık kontrolleri, kronik hastalık takibi ve check-up hizmetleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4a3 3 0 0 0 6 0V2M8 10h8l1 6a5 5 0 0 1-10 0Z"/></svg></span>
-        <h3>Üroloji</h3>
-        <p>Böbrek, mesane ve idrar yolu rahatsızlıklarında tanı ve tedavi hizmetleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html#randevu" data-name="anestezi ve reanimasyon">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c0-6 3-11 8-11s8 5 8 11"/><path d="M4 18h16"/></svg></span>
+          <h3>Anestezi ve Reanimasyon</h3>
+          <p>Ameliyat öncesi, sırası ve sonrası anestezi ve yoğun bakım desteği.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M8 21c-2-1-3-3-3-6 0-3 2-5 2-8a3 3 0 0 1 6 0c0 3 2 5 2 8 0 3-1 5-3 6"/></svg></span>
-        <h3>Göğüs Hastalıkları</h3>
-        <p>Solunum yolu ve akciğer hastalıklarında tanı ve tedavi hizmetleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
+        <a class="dept-card" href="iletisim.html" data-name="acil servis">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <h3>Acil Servis</h3>
+          <p>7/24 kesintisiz hizmet veren, deneyimli ekibimizle donanımlı acil ünitesi.</p>
+          <span class="dept-card-link">İletişim →</span>
+        </a>
 
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a8 8 0 0 0-8 8c0 3 1.5 5 3 6.2V21l3-1.6c.6.1 1.3.2 2 .2a8 8 0 0 0 0-16Z"/><path d="M9 10c.5-1 1.5-1.5 2.5-1 .8.4 1 1.2.6 2-.4.7-1.1.6-1.6 1.3-.4.6-.2 1.4.5 1.7"/></svg></span>
-        <h3>Psikiyatri</h3>
-        <p>Ruh sağlığı değerlendirmesi ve tedavi hizmetleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
-
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v6l-5 9a3 3 0 0 0 3 5h8a3 3 0 0 0 3-5l-5-9V2"/></svg></span>
-        <h3>Mikrobiyoloji</h3>
-        <p>Enfeksiyon hastalıklarının laboratuvar tanısı.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
-
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3"/></svg></span>
-        <h3>Biyokimya</h3>
-        <p>Kan ve vücut sıvılarının laboratuvar analizleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
-
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 3-5 6-5 9a5 5 0 0 0 10 0c0-3-2-6-5-9Z"/><path d="M12 12v9"/></svg></span>
-        <h3>Beslenme ve Diyetetik</h3>
-        <p>Kişiye özel beslenme programları ve diyet danışmanlığı.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
-
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 9v3a5.5 5.5 0 0 0 11 0V9M10 21v-3.5M4.5 4v3M15.5 4v3"/><circle cx="18.5" cy="6" r="2"/></svg></span>
-        <h3>Dahiliye (İç Hastalıkları)</h3>
-        <p>Genel sağlık kontrolleri, kronik hastalık takibi ve check-up hizmetleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
-
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c0-6 3-11 8-11s8 5 8 11"/><path d="M4 18h16"/></svg></span>
-        <h3>Anestezi ve Reanimasyon</h3>
-        <p>Ameliyat öncesi, sırası ve sonrası anestezi ve yoğun bakım desteği.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
-
-      <a class="dept-card" href="iletisim.html#randevu">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
-        <h3>Radyoloji</h3>
-        <p>Röntgen, ultrason, tomografi ve MR ile ileri görüntüleme hizmetleri.</p>
-        <span class="dept-card-link">Randevu Al →</span>
-      </a>
-
-      <a class="dept-card" href="iletisim.html">
-        <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
-        <h3>Acil Servis</h3>
-        <p>7/24 kesintisiz hizmet veren, deneyimli ekibimizle donanımlı acil ünitesi.</p>
-        <span class="dept-card-link">İletişim →</span>
-      </a>
-
+      </div>
     </div>
+
+    <div class="dept-group" data-group>
+      <h2 class="dept-group-title">Cerrahi Tıp Bilimleri</h2>
+      <div class="dept-cards">
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="genel cerrahi">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v6l-3 5a4 4 0 0 0 4 6h8a4 4 0 0 0 4-6l-3-5V3"/><path d="M7 3h10"/></svg></span>
+          <h3>Genel Cerrahi</h3>
+          <p>Açık ve laparoskopik cerrahi yöntemlerle geniş kapsamlı ameliyat hizmetleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="ortopedi ve travmatoloji">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c0 3-1 4-1 6s2 2 2 4-1 3-1 5M15 3c0 3 1 4 1 6s-2 2-2 4 1 3 1 5"/><circle cx="11.5" cy="12" r="2.3"/></svg></span>
+          <h3>Ortopedi ve Travmatoloji</h3>
+          <p>Kırık, çıkık, spor yaralanmaları ve eklem rahatsızlıklarında tedavi.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="beyin ve sinir cerrahisi">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4a2.6 2.6 0 0 0-2.6 2.6 2.6 2.6 0 0 0-1.7 2.4A2.6 2.6 0 0 0 5.4 11a2.7 2.7 0 0 0 2.6 2.7v3.6a1.7 1.7 0 0 0 3.4 0V6.6A2.6 2.6 0 0 0 8 4Z"/><path d="M15 15.5 20 20.5M18.5 14 22 17.5"/></svg></span>
+          <h3>Beyin ve Sinir Cerrahisi</h3>
+          <p>Beyin, omurilik ve periferik sinir sistemi cerrahi tedavileri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="göz sağlığı ve hastalıkları">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3>Göz Sağlığı ve Hastalıkları</h3>
+          <p>Katarakt, glokom ve görme kusurlarında muayene ve cerrahi tedavi.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="kulak burun boğaz">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a5 5 0 0 0-5 5c0 2 1 2.8 1 4.5A2.5 2.5 0 0 0 10.5 16c1 0 1.5-.6 1.5-1.5S11.5 13 11.5 12a2 2 0 1 1 4 0c0 3-3 3.5-3 6.5a3.5 3.5 0 0 0 3.5 3.5"/></svg></span>
+          <h3>Kulak Burun Boğaz</h3>
+          <p>İşitme, denge, sinüzit ve boğaz rahatsızlıklarında tanı ve tedavi.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="üroloji">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4a3 3 0 0 0 6 0V2M8 10h8l1 6a5 5 0 0 1-10 0Z"/></svg></span>
+          <h3>Üroloji</h3>
+          <p>Böbrek, mesane ve idrar yolu rahatsızlıklarında tanı ve tedavi hizmetleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="kadın hastalıkları ve doğum">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3.2"/><path d="M6 21c0-3.5 2.7-6.3 6-6.3s6 2.8 6 6.3"/><path d="M12 14.7V21"/></svg></span>
+          <h3>Kadın Hastalıkları ve Doğum</h3>
+          <p>Gebelik takibi, doğum, jinekolojik muayene ve kadın sağlığı hizmetleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="dept-group" data-group>
+      <h2 class="dept-group-title">Temel Tıp Bilimleri (Laboratuvar &amp; Görüntüleme)</h2>
+      <div class="dept-cards">
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="mikrobiyoloji">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v6l-5 9a3 3 0 0 0 3 5h8a3 3 0 0 0 3-5l-5-9V2"/></svg></span>
+          <h3>Mikrobiyoloji</h3>
+          <p>Enfeksiyon hastalıklarının laboratuvar tanısı.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="biyokimya">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3"/></svg></span>
+          <h3>Biyokimya</h3>
+          <p>Kan ve vücut sıvılarının laboratuvar analizleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+        <a class="dept-card" href="iletisim.html#randevu" data-name="radyoloji">
+          <span class="dept-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
+          <h3>Radyoloji</h3>
+          <p>Röntgen, ultrason, tomografi ve MR ile ileri görüntüleme hizmetleri.</p>
+          <span class="dept-card-link">Randevu Al →</span>
+        </a>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -195,6 +220,30 @@
 <footer id="contact"><img src="img/logo/ege-yasam-logo.png" alt="Özel Ege Yaşam Hastanesi"><div><strong>Özel Ege Yaşam Hastanesi</strong><p>Karabağlar / İzmir</p></div><div><strong>İletişim</strong><p>0232 226 56 56</p></div></footer>
 
 <script>const btn=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');btn?.addEventListener('click',()=>nav.classList.toggle('open'));</script>
+<script>
+(() => {
+  const input = document.getElementById('dept-search-input');
+  const groups = document.querySelectorAll('[data-group]');
+  const noResults = document.getElementById('dept-no-results');
+  if (!input) return;
+  const normalize = s => s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g,'');
+  input.addEventListener('input', () => {
+    const q = normalize(input.value.trim());
+    let anyVisible = false;
+    groups.forEach(group => {
+      let groupHasMatch = false;
+      group.querySelectorAll('.dept-card').forEach(card => {
+        const match = !q || normalize(card.dataset.name || '').includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) groupHasMatch = true;
+      });
+      group.hidden = !groupHasMatch;
+      if (groupHasMatch) anyVisible = true;
+    });
+    noResults.hidden = anyVisible;
+  });
+})();
+</script>
 <script src="js/motion.js" defer></script>
 <script src="js/scroll-motion.js" defer></script>
 </body>
