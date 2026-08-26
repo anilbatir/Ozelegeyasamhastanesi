@@ -125,12 +125,24 @@
   media.className = 'hero-slide-media';
   hero.prepend(media);
 
-  const slides = [
+  const isEN = document.documentElement.lang.toLowerCase().startsWith('en');
+  const base = isEN ? '../' : '';
+
+  const slidesTR = [
     {mode:'photo',image:'img/hero/slide-doctor-hallway.jpg',pos:'68% 27%',title:'Dünya standartlarında<br>bakım, <span>evinize yakın</span>',description:'Gelişmiş teknoloji ve uzman kadromuzla, sağlığınızı korumak için yanınızdayız.',top:['27+ Uzman Hekim','Farklı branşlarda deneyimli hekim kadrosu'],bottom:['Acil Durumlarda Yanınızdayız','7/24 aktif hizmet']},
     {mode:'photo',image:'img/hero/slide-surgery.jpg',pos:'62% 32%',title:'Güvenli cerrahi,<br><span>deneyimli eller.</span>',description:'Modern cerrahi yaklaşımımız ve ileri teknoloji desteğimizle güvenli tedavi süreçleri sunuyoruz.',top:['Modern Ameliyathane','Teknoloji destekli cerrahi altyapı'],bottom:['Deneyimli Cerrahi Ekip','Hasta güvenliği odaklı yaklaşım'],cardPos:{top:{top:'58%',right:'1%'},bottom:{bottom:'-4%',left:'0%'}}},
     {mode:'photo',image:'img/hero/slide-mother-child.jpg',pos:'64% 30%',accent:'#c93368',title:'Hayatın en özel<br>anlarında <span>yanınızdayız.</span>',description:'Kadın doğum ve çocuk sağlığı alanlarında anne ve bebeğin sağlığını, sevgi ve özenle koruyoruz.',top:['Kadın Doğum & Çocuk Sağlığı','Anne ve bebeğe bütüncül yaklaşım'],bottom:['Şefkatli Bakım','Uzman ekip, güvenli takip'],cardPos:{top:{top:'50%',right:'3%'}}},
     {mode:'photo',image:'img/hero/slide-emergency.jpg',pos:'66% 35%',accent:'#d1432f',title:'Sağlığınız için<br><span>7/24 buradayız.</span>',description:'Deneyimli acil servis ekibimiz ve tam donanımlı ünitemizle, günün her saati yanınızdayız.',top:['7/24 Acil Servis','Kesintisiz müdahale imkânı'],bottom:['Acil Servis Aktif','Hazır ekip ve güçlü altyapı'],cardPos:{top:{top:'12%',right:'1%'}}}
   ];
+
+  const slidesEN = [
+    {mode:'photo',image:'img/hero/slide-doctor-hallway.jpg',pos:'68% 27%',title:'World-class<br>care, <span>close to home</span>',description:'With advanced technology and an expert medical team, we’re here to protect your health.',top:['27+ Expert Physicians','Experienced staff across many specialties'],bottom:['We’re With You in Emergencies','Active 24/7 service']},
+    {mode:'photo',image:'img/hero/slide-surgery.jpg',pos:'62% 32%',title:'Safe surgery,<br><span>experienced hands.</span>',description:'We offer safe treatment processes with our modern surgical approach and advanced technology.',top:['Modern Operating Rooms','Technology-supported surgical infrastructure'],bottom:['Experienced Surgical Team','Patient-safety focused approach'],cardPos:{top:{top:'58%',right:'1%'},bottom:{bottom:'-4%',left:'0%'}}},
+    {mode:'photo',image:'img/hero/slide-mother-child.jpg',pos:'64% 30%',accent:'#c93368',title:'We’re with you in<br>life’s <span>most special moments.</span>',description:'We protect the health of mother and baby with love and care in obstetrics and pediatrics.',top:['Obstetrics & Pediatrics','A holistic approach to mother and baby'],bottom:['Compassionate Care','Expert team, safe follow-up'],cardPos:{top:{top:'50%',right:'3%'}}},
+    {mode:'photo',image:'img/hero/slide-emergency.jpg',pos:'66% 35%',accent:'#d1432f',title:'Here for your health,<br><span>24/7.</span>',description:'With our experienced emergency team and fully-equipped unit, we’re here around the clock.',top:['24/7 Emergency Service','Uninterrupted response capability'],bottom:['Emergency Service Active','Ready team, strong infrastructure'],cardPos:{top:{top:'12%',right:'1%'}}}
+  ];
+
+  const slides = (isEN ? slidesEN : slidesTR).map(s => ({...s, image: base + s.image}));
 
   slides.filter(s=>s.image).forEach(s=>{ const i=new Image(); i.src=s.image; });
 
