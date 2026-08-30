@@ -1,6 +1,7 @@
 /* İletişim sayfası */
 
 .contact-section{padding:56px clamp(24px,6vw,90px) 90px}
+.contact-section .section-heading h2{color:#0c2346;font-size:28px}
 .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
 .contact-grid h2{font-size:20px;color:#0c2346;margin:0 0 20px}
 .contact-grid h2.contact-subheading{font-size:16px;margin-top:36px}
