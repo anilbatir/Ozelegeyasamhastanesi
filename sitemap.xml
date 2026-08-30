@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.egeyasamhastanesi.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egeyasamhastanesi.com.tr/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egeyasamhastanesi.com.tr/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/bolumler.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.egeyasamhastanesi.com.tr/bolumler.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egeyasamhastanesi.com.tr/en/bolumler.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egeyasamhastanesi.com.tr/bolumler.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/kardiyoloji.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.egeyasamhastanesi.com.tr/kardiyoloji.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egeyasamhastanesi.com.tr/en/kardiyoloji.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egeyasamhastanesi.com.tr/kardiyoloji.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/doktorlarimiz.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/iletisim.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.egeyasamhastanesi.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egeyasamhastanesi.com.tr/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egeyasamhastanesi.com.tr/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/en/hakkimizda.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/en/bolumler.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.egeyasamhastanesi.com.tr/bolumler.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egeyasamhastanesi.com.tr/en/bolumler.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egeyasamhastanesi.com.tr/bolumler.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/en/kardiyoloji.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.egeyasamhastanesi.com.tr/kardiyoloji.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.egeyasamhastanesi.com.tr/en/kardiyoloji.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.egeyasamhastanesi.com.tr/kardiyoloji.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

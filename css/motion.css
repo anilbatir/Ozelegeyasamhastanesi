@@ -1,0 +1,55 @@
+/* Magnetic Focus — calm hospital-grade hero interaction */
+.hero{--mx:72%;--my:38%;--focus-strength:.72}
+.hero::selection{background:rgba(18,98,198,.16)}
+.hero-visual,.doctor-cutout,.orb,.ring,.float-card,.hero .btn{will-change:transform}
+
+/* Doctor remains the visual anchor. Only surrounding aura/cards move. */
+.doctor-cutout{transform:none!important;animation:none!important}
+.hero-visual{animation:none!important}
+
+/* Soft living aura that is visible even on touch devices. */
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  inset:-10%;
+  z-index:0;
+  pointer-events:none;
+  background:radial-gradient(circle at var(--mx) var(--my),rgba(68,171,225,.20),rgba(68,171,225,.07) 19%,transparent 45%);
+  opacity:var(--focus-strength,.72);
+  transition:opacity .25s ease,background-position .18s ease;
+  animation:focusAuraBreath 5.8s ease-in-out infinite;
+}
+@keyframes focusAuraBreath{
+  0%,100%{filter:blur(0px);opacity:.68}
+  50%{filter:blur(2px);opacity:.82}
+}
+
+.orb,.ring,.float-card{transition:transform .18s cubic-bezier(.2,.75,.2,1)}
+.hero .btn{transition:transform .16s ease,box-shadow .2s ease}
+
+@media (hover:hover) and (pointer:fine){
+  .hero.is-pointer-active .orb.one{
+    transform:translate3d(var(--orb1-x,0),var(--orb1-y,0),0) scale(var(--orb1-scale,1));
+  }
+  .hero.is-pointer-active .orb.two{
+    transform:translate3d(var(--orb2-x,0),var(--orb2-y,0),0) scale(var(--orb2-scale,1));
+  }
+  .hero.is-pointer-active .r1{
+    transform:translate3d(var(--ring1-x,0),var(--ring1-y,0),0) scale(var(--ring1-scale,1));
+  }
+  .hero.is-pointer-active .r2{
+    transform:rotate(-15deg) translate3d(var(--ring2-x,0),var(--ring2-y,0),0);
+  }
+  .hero.is-pointer-active .float-card.top{
+    transform:translate3d(var(--card1-x,0),var(--card1-y,0),0) scale(var(--card1-scale,1));
+  }
+  .hero.is-pointer-active .float-card.bottom{
+    transform:translate3d(var(--card2-x,0),var(--card2-y,0),0) scale(var(--card2-scale,1));
+  }
+  .magnetic{transform:translate3d(var(--mag-x,0),var(--mag-y,0),0)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-visual::before{animation:none!important;display:none}
+  .orb,.ring,.float-card,.hero .btn{transition:none!important;transform:none!important}
+}
