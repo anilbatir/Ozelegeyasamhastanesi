@@ -92,6 +92,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/en/patient-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/en/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.egeyasamhastanesi.com.tr/en/kardiyoloji.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.egeyasamhastanesi.com.tr/kardiyoloji.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.egeyasamhastanesi.com.tr/en/kardiyoloji.html"/>
