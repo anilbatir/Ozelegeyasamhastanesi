@@ -51,40 +51,45 @@
     <span class="kicker">UZMAN KADROMUZ</span>
     <h1>Doktorlarımız</h1>
     <p>Farklı branşlarda deneyimli hekimlerimizle güvenilir ve kaliteli sağlık hizmeti sunuyoruz.</p>
+    <div class="dept-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="doctor-search-input" placeholder="Doktor veya branş ara (örn. Kardiyoloji, Ortopedi...)" aria-label="Doktor ara">
+    </div>
   </div>
 </section>
 
 <section class="doctors">
   <div class="container">
-    <div class="doctor-grid">
+    <div id="doctor-no-results" class="dept-no-results" hidden>Aramanızla eşleşen doktor bulunamadı.</div>
+    <div class="doctor-grid" id="doctor-grid">
 
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/suleyman-icke.avif" alt="Op. Dr. Süleyman İçke" loading="lazy"></div><div class="meta"><span>Beyin ve Sinir Cerrahisi</span><h3>Op. Dr. Süleyman İçke</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/sedat-akdemir.avif" alt="Uzm. Dr. Sedat Akdemir" loading="lazy"></div><div class="meta"><span>Kardiyoloji</span><h3>Uzm. Dr. Sedat Akdemir</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/alptekin-tanrikut.avif" alt="Op. Dr. Alptekin Tanrıkut" loading="lazy"></div><div class="meta"><span>Genel Cerrahi</span><h3>Op. Dr. Alptekin Tanrıkut</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/ali-kayabay.avif" alt="Op. Dr. Ali Kayabay" loading="lazy"></div><div class="meta"><span>Genel Cerrahi</span><h3>Op. Dr. Ali Kayabay</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/abdulvahit-yukselen.avif" alt="Op. Dr. Abdülvahit Yükselen" loading="lazy"></div><div class="meta"><span>Ortopedi ve Travmatoloji</span><h3>Op. Dr. Abdülvahit Yükselen</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/yahya-cosar.avif" alt="Op. Dr. Yahya Coşar" loading="lazy"></div><div class="meta"><span>Ortopedi ve Travmatoloji</span><h3>Op. Dr. Yahya Coşar</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/yalcin-simsek.avif" alt="Op. Dr. Yalçın Şimşek" loading="lazy"></div><div class="meta"><span>Kadın Hastalıkları ve Doğum</span><h3>Op. Dr. Yalçın Şimşek</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/aysegul-gumrah-tuncel.avif" alt="Op. Dr. Ayşegül Gümrah Tuncel" loading="lazy"></div><div class="meta"><span>Kadın Hastalıkları ve Doğum</span><h3>Op. Dr. Ayşegül Gümrah Tuncel</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/ruhi-gunel.avif" alt="Uzm. Dr. Ruhi Günel" loading="lazy"></div><div class="meta"><span>Çocuk Sağlığı ve Hastalıkları</span><h3>Uzm. Dr. Ruhi Günel</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/gizem-koskdereli.avif" alt="Uzm. Dr. Gizem Köşkdereli" loading="lazy"></div><div class="meta"><span>Çocuk Sağlığı ve Hastalıkları</span><h3>Uzm. Dr. Gizem Köşkdereli</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/murat-ozisik.avif" alt="Uzm. Dr. Murat Özışık" loading="lazy"></div><div class="meta"><span>Dahiliye</span><h3>Uzm. Dr. Murat Özışık</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/hacer-agca.avif" alt="Uzm. Dr. Hacer Ağça" loading="lazy"></div><div class="meta"><span>Dahiliye</span><h3>Uzm. Dr. Hacer Ağça</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/shukur-imanov.avif" alt="Uzm. Dr. Shukur İmanov" loading="lazy"></div><div class="meta"><span>Nöroloji</span><h3>Uzm. Dr. Shukur İmanov</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/tamer-kuzey.avif" alt="Op. Dr. Tamer Kuzey" loading="lazy"></div><div class="meta"><span>Üroloji</span><h3>Op. Dr. Tamer Kuzey</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/atalay-ozkul.avif" alt="Uzm. Dr. Atalay Özkul" loading="lazy"></div><div class="meta"><span>Göğüs Hastalıkları</span><h3>Uzm. Dr. Atalay Özkul</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/mehmet-turkay.avif" alt="Op. Dr. Mehmet Türkay" loading="lazy"></div><div class="meta"><span>Kulak Burun Boğaz</span><h3>Op. Dr. Mehmet Türkay</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/nargiz-ahmedova.avif" alt="Dr. Nargiz Ahmedova" loading="lazy"></div><div class="meta"><span>Göz Sağlığı ve Hastalıkları</span><h3>Dr. Nargiz Ahmedova</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/isa-sen.avif" alt="Uzm. Dr. İsa Şen" loading="lazy"></div><div class="meta"><span>Anestezi ve Reanimasyon</span><h3>Uzm. Dr. İsa Şen</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/esref-karaoglan.avif" alt="Uzm. Dr. Eşref Karaoğlan" loading="lazy"></div><div class="meta"><span>Radyoloji</span><h3>Uzm. Dr. Eşref Karaoğlan</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/husnu-kemal-kurtaran.avif" alt="Uzm. Dr. Hüsnü Kemal Kurtaran" loading="lazy"></div><div class="meta"><span>Radyoloji</span><h3>Uzm. Dr. Hüsnü Kemal Kurtaran</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/semih-rasim-guner.avif" alt="Uzm. Dr. Semih Rasim Güner" loading="lazy"></div><div class="meta"><span>Biyokimya</span><h3>Uzm. Dr. Semih Rasim Güner</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/okan-alpak.avif" alt="Uzm. Dr. Okan Alpak" loading="lazy"></div><div class="meta"><span>Mikrobiyoloji</span><h3>Uzm. Dr. Okan Alpak</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/mammad-mammadaliyev.avif" alt="Dr. Mammad Mammadaliyev" loading="lazy"></div><div class="meta"><span>Acil Servis</span><h3>Dr. Mammad Mammadaliyev</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/muzaffer-serefli.avif" alt="Dr. Muzaffer Şerefli" loading="lazy"></div><div class="meta"><span>Acil Servis</span><h3>Dr. Muzaffer Şerefli</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/vedat-kurt.avif" alt="Dr. Vedat Kurt" loading="lazy"></div><div class="meta"><span>Acil Servis</span><h3>Dr. Vedat Kurt</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/dilek-karamanlioglu.avif" alt="Dyt. Dilek Karamanlıoğlu" loading="lazy"></div><div class="meta"><span>Beslenme ve Diyetetik</span><h3>Dyt. Dilek Karamanlıoğlu</h3></div></article>
-      <article class="doctor-card"><div class="photo"><img src="img/doktorlar/mehmet-filiz.avif" alt="Uzm. Dr. Mehmet Filiz" loading="lazy"></div><div class="meta"><span>Uzman Hekim</span><h3>Uzm. Dr. Mehmet Filiz</h3></div></article>
+      <article class="doctor-card" data-search="beyin ve sinir cerrahisi op. dr. süleyman i̇çke"><div class="photo"><img src="img/doktorlar/suleyman-icke.avif" alt="Op. Dr. Süleyman İçke" loading="lazy"></div><div class="meta"><span>Beyin ve Sinir Cerrahisi</span><h3>Op. Dr. Süleyman İçke</h3><a href="iletisim.html?bolum=Beyin%20ve%20Sinir%20Cerrahisi#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="kardiyoloji uzm. dr. sedat akdemir"><div class="photo"><img src="img/doktorlar/sedat-akdemir.avif" alt="Uzm. Dr. Sedat Akdemir" loading="lazy"></div><div class="meta"><span>Kardiyoloji</span><h3>Uzm. Dr. Sedat Akdemir</h3><a href="iletisim.html?bolum=Kardiyoloji#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="genel cerrahi op. dr. alptekin tanrıkut"><div class="photo"><img src="img/doktorlar/alptekin-tanrikut.avif" alt="Op. Dr. Alptekin Tanrıkut" loading="lazy"></div><div class="meta"><span>Genel Cerrahi</span><h3>Op. Dr. Alptekin Tanrıkut</h3><a href="iletisim.html?bolum=Genel%20Cerrahi#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="genel cerrahi op. dr. ali kayabay"><div class="photo"><img src="img/doktorlar/ali-kayabay.avif" alt="Op. Dr. Ali Kayabay" loading="lazy"></div><div class="meta"><span>Genel Cerrahi</span><h3>Op. Dr. Ali Kayabay</h3><a href="iletisim.html?bolum=Genel%20Cerrahi#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="ortopedi ve travmatoloji op. dr. abdülvahit yükselen"><div class="photo"><img src="img/doktorlar/abdulvahit-yukselen.avif" alt="Op. Dr. Abdülvahit Yükselen" loading="lazy"></div><div class="meta"><span>Ortopedi ve Travmatoloji</span><h3>Op. Dr. Abdülvahit Yükselen</h3><a href="iletisim.html?bolum=Ortopedi%20ve%20Travmatoloji#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="ortopedi ve travmatoloji op. dr. yahya coşar"><div class="photo"><img src="img/doktorlar/yahya-cosar.avif" alt="Op. Dr. Yahya Coşar" loading="lazy"></div><div class="meta"><span>Ortopedi ve Travmatoloji</span><h3>Op. Dr. Yahya Coşar</h3><a href="iletisim.html?bolum=Ortopedi%20ve%20Travmatoloji#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="kadın hastalıkları ve doğum op. dr. yalçın şimşek"><div class="photo"><img src="img/doktorlar/yalcin-simsek.avif" alt="Op. Dr. Yalçın Şimşek" loading="lazy"></div><div class="meta"><span>Kadın Hastalıkları ve Doğum</span><h3>Op. Dr. Yalçın Şimşek</h3><a href="iletisim.html?bolum=Kad%C4%B1n%20Hastal%C4%B1klar%C4%B1%20ve%20Do%C4%9Fum#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="kadın hastalıkları ve doğum op. dr. ayşegül gümrah tuncel"><div class="photo"><img src="img/doktorlar/aysegul-gumrah-tuncel.avif" alt="Op. Dr. Ayşegül Gümrah Tuncel" loading="lazy"></div><div class="meta"><span>Kadın Hastalıkları ve Doğum</span><h3>Op. Dr. Ayşegül Gümrah Tuncel</h3><a href="iletisim.html?bolum=Kad%C4%B1n%20Hastal%C4%B1klar%C4%B1%20ve%20Do%C4%9Fum#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="çocuk sağlığı ve hastalıkları uzm. dr. ruhi günel"><div class="photo"><img src="img/doktorlar/ruhi-gunel.avif" alt="Uzm. Dr. Ruhi Günel" loading="lazy"></div><div class="meta"><span>Çocuk Sağlığı ve Hastalıkları</span><h3>Uzm. Dr. Ruhi Günel</h3><a href="iletisim.html?bolum=%C3%87ocuk%20Sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20ve%20Hastal%C4%B1klar%C4%B1#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="çocuk sağlığı ve hastalıkları uzm. dr. gizem köşkdereli"><div class="photo"><img src="img/doktorlar/gizem-koskdereli.avif" alt="Uzm. Dr. Gizem Köşkdereli" loading="lazy"></div><div class="meta"><span>Çocuk Sağlığı ve Hastalıkları</span><h3>Uzm. Dr. Gizem Köşkdereli</h3><a href="iletisim.html?bolum=%C3%87ocuk%20Sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20ve%20Hastal%C4%B1klar%C4%B1#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="dahiliye uzm. dr. murat özışık"><div class="photo"><img src="img/doktorlar/murat-ozisik.avif" alt="Uzm. Dr. Murat Özışık" loading="lazy"></div><div class="meta"><span>Dahiliye</span><h3>Uzm. Dr. Murat Özışık</h3><a href="iletisim.html?bolum=Dahiliye#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="dahiliye uzm. dr. hacer ağça"><div class="photo"><img src="img/doktorlar/hacer-agca.avif" alt="Uzm. Dr. Hacer Ağça" loading="lazy"></div><div class="meta"><span>Dahiliye</span><h3>Uzm. Dr. Hacer Ağça</h3><a href="iletisim.html?bolum=Dahiliye#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="nöroloji uzm. dr. shukur i̇manov"><div class="photo"><img src="img/doktorlar/shukur-imanov.avif" alt="Uzm. Dr. Shukur İmanov" loading="lazy"></div><div class="meta"><span>Nöroloji</span><h3>Uzm. Dr. Shukur İmanov</h3><a href="iletisim.html?bolum=N%C3%B6roloji#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="üroloji op. dr. tamer kuzey"><div class="photo"><img src="img/doktorlar/tamer-kuzey.avif" alt="Op. Dr. Tamer Kuzey" loading="lazy"></div><div class="meta"><span>Üroloji</span><h3>Op. Dr. Tamer Kuzey</h3><a href="iletisim.html?bolum=%C3%9Croloji#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="göğüs hastalıkları uzm. dr. atalay özkul"><div class="photo"><img src="img/doktorlar/atalay-ozkul.avif" alt="Uzm. Dr. Atalay Özkul" loading="lazy"></div><div class="meta"><span>Göğüs Hastalıkları</span><h3>Uzm. Dr. Atalay Özkul</h3><a href="iletisim.html?bolum=G%C3%B6%C4%9F%C3%BCs%20Hastal%C4%B1klar%C4%B1#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="kulak burun boğaz op. dr. mehmet türkay"><div class="photo"><img src="img/doktorlar/mehmet-turkay.avif" alt="Op. Dr. Mehmet Türkay" loading="lazy"></div><div class="meta"><span>Kulak Burun Boğaz</span><h3>Op. Dr. Mehmet Türkay</h3><a href="iletisim.html?bolum=Kulak%20Burun%20Bo%C4%9Faz#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="göz sağlığı ve hastalıkları dr. nargiz ahmedova"><div class="photo"><img src="img/doktorlar/nargiz-ahmedova.avif" alt="Dr. Nargiz Ahmedova" loading="lazy"></div><div class="meta"><span>Göz Sağlığı ve Hastalıkları</span><h3>Dr. Nargiz Ahmedova</h3><a href="iletisim.html?bolum=G%C3%B6z%20Sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20ve%20Hastal%C4%B1klar%C4%B1#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="anestezi ve reanimasyon uzm. dr. i̇sa şen"><div class="photo"><img src="img/doktorlar/isa-sen.avif" alt="Uzm. Dr. İsa Şen" loading="lazy"></div><div class="meta"><span>Anestezi ve Reanimasyon</span><h3>Uzm. Dr. İsa Şen</h3><a href="iletisim.html?bolum=Anestezi%20ve%20Reanimasyon#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="radyoloji uzm. dr. eşref karaoğlan"><div class="photo"><img src="img/doktorlar/esref-karaoglan.avif" alt="Uzm. Dr. Eşref Karaoğlan" loading="lazy"></div><div class="meta"><span>Radyoloji</span><h3>Uzm. Dr. Eşref Karaoğlan</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
+      <article class="doctor-card" data-search="radyoloji uzm. dr. hüsnü kemal kurtaran"><div class="photo"><img src="img/doktorlar/husnu-kemal-kurtaran.avif" alt="Uzm. Dr. Hüsnü Kemal Kurtaran" loading="lazy"></div><div class="meta"><span>Radyoloji</span><h3>Uzm. Dr. Hüsnü Kemal Kurtaran</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
+      <article class="doctor-card" data-search="biyokimya uzm. dr. semih rasim güner"><div class="photo"><img src="img/doktorlar/semih-rasim-guner.avif" alt="Uzm. Dr. Semih Rasim Güner" loading="lazy"></div><div class="meta"><span>Biyokimya</span><h3>Uzm. Dr. Semih Rasim Güner</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
+      <article class="doctor-card" data-search="mikrobiyoloji uzm. dr. okan alpak"><div class="photo"><img src="img/doktorlar/okan-alpak.avif" alt="Uzm. Dr. Okan Alpak" loading="lazy"></div><div class="meta"><span>Mikrobiyoloji</span><h3>Uzm. Dr. Okan Alpak</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
+      <article class="doctor-card" data-search="acil servis dr. mammad mammadaliyev"><div class="photo"><img src="img/doktorlar/mammad-mammadaliyev.avif" alt="Dr. Mammad Mammadaliyev" loading="lazy"></div><div class="meta"><span>Acil Servis</span><h3>Dr. Mammad Mammadaliyev</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
+      <article class="doctor-card" data-search="acil servis dr. muzaffer şerefli"><div class="photo"><img src="img/doktorlar/muzaffer-serefli.avif" alt="Dr. Muzaffer Şerefli" loading="lazy"></div><div class="meta"><span>Acil Servis</span><h3>Dr. Muzaffer Şerefli</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
+      <article class="doctor-card" data-search="acil servis dr. vedat kurt"><div class="photo"><img src="img/doktorlar/vedat-kurt.avif" alt="Dr. Vedat Kurt" loading="lazy"></div><div class="meta"><span>Acil Servis</span><h3>Dr. Vedat Kurt</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
+      <article class="doctor-card" data-search="beslenme ve diyetetik dyt. dilek karamanlıoğlu"><div class="photo"><img src="img/doktorlar/dilek-karamanlioglu.avif" alt="Dyt. Dilek Karamanlıoğlu" loading="lazy"></div><div class="meta"><span>Beslenme ve Diyetetik</span><h3>Dyt. Dilek Karamanlıoğlu</h3><a href="iletisim.html?bolum=Beslenme%20ve%20Diyetetik#randevu" class="btn primary small dept-doctor-btn">Randevu Al</a></div></article>
+      <article class="doctor-card" data-search="uzman hekim uzm. dr. mehmet filiz"><div class="photo"><img src="img/doktorlar/mehmet-filiz.avif" alt="Uzm. Dr. Mehmet Filiz" loading="lazy"></div><div class="meta"><span>Uzman Hekim</span><h3>Uzm. Dr. Mehmet Filiz</h3><a href="iletisim.html#randevu" class="btn primary small dept-doctor-btn">İletişime Geç</a></div></article>
 
     </div>
   </div>
@@ -136,8 +141,38 @@
   <div class="footer-bottom">&copy; <span data-year></span> Özel Ege Yaşam Hastanesi. Tüm hakları saklıdır. <a href="gizlilik-politikasi.html">KVKK Aydınlatma Metni</a></div>
 </footer>
 
+<div class="quick-access" aria-label="Hızlı erişim">
+  <a href="tel:+902322265656" class="quick-access-btn quick-access-call" aria-label="Hemen ara">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1.4 1.4 0 0 1 1.4-.35c1.2.4 2.5.6 3.8.6a1.4 1.4 0 0 1 1.4 1.4V21a1.4 1.4 0 0 1-1.4 1.4C10.6 22.4 1.6 13.4 1.6 2.4A1.4 1.4 0 0 1 3 1h3.6A1.4 1.4 0 0 1 8 2.4c0 1.3.2 2.6.6 3.8.15.5.05 1.05-.35 1.4Z"/></svg>
+    <span>Hemen Ara</span>
+  </a>
+  <a href="iletisim.html#randevu" class="quick-access-btn quick-access-appt" aria-label="Randevu al">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+    <span>Randevu Al</span>
+  </a>
+</div>
+
 <script>const btn=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');btn?.addEventListener('click',()=>nav.classList.toggle('open'));</script>
 <script>document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script>
+(() => {
+  const input = document.getElementById('doctor-search-input');
+  const grid = document.getElementById('doctor-grid');
+  const noResults = document.getElementById('doctor-no-results');
+  if (!input || !grid) return;
+  const normalize = s => s.toLocaleLowerCase('tr').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  input.addEventListener('input', () => {
+    const q = normalize(input.value.trim());
+    let anyVisible = false;
+    grid.querySelectorAll('.doctor-card').forEach(card => {
+      const match = !q || normalize(card.dataset.search || '').includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) anyVisible = true;
+    });
+    noResults.hidden = anyVisible;
+  });
+})();
+</script>
 <script src="js/motion.js" defer></script>
 <script src="js/scroll-motion.js" defer></script>
 </body>
