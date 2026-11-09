@@ -1,0 +1,27 @@
+.guide-steps{padding:20px clamp(24px,6vw,90px) 44px}
+.guide-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.guide-step-card{background:#fff;border:1px solid #ebf2f4;border-radius:18px;padding:26px;box-shadow:0 10px 26px rgba(30,70,105,.05);position:relative}
+.guide-step-num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#eef6ff;color:#317290;font-weight:800;font-size:15px;margin-bottom:14px}
+.guide-step-card h3{font-size:17px;color:#398bae;margin:0 0 8px}
+.guide-step-card p{font-size:14px;color:#869ba3;line-height:1.6;margin:0}
+
+.guide-checklist{padding:20px clamp(24px,6vw,90px) 44px}
+.guide-checklist-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px}
+.guide-checklist-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #ebf2f4;border-radius:16px;padding:18px 20px;box-shadow:0 10px 26px rgba(30,70,105,.05)}
+.guide-checklist-item svg{flex:0 0 20px;width:20px;height:20px;color:#2fb380;margin-top:2px}
+.guide-checklist-item p{margin:0;font-size:14.5px;color:#4c5c73;line-height:1.55}
+
+.guide-faq{padding:20px clamp(24px,6vw,90px) 54px}
+.guide-faq-list{max-width:820px;display:flex;flex-direction:column;gap:12px}
+.guide-faq-item{background:#fff;border:1px solid #ebf2f4;border-radius:16px;padding:4px 22px;box-shadow:0 10px 26px rgba(30,70,105,.05)}
+.guide-faq-item summary{cursor:pointer;list-style:none;padding:18px 28px 18px 0;font-weight:700;color:#317290;font-size:15.5px;position:relative}
+.guide-faq-item summary::-webkit-details-marker{display:none}
+.guide-faq-item summary::after{content:"+";position:absolute;right:0;top:16px;font-size:22px;color:#53afd2;font-weight:400}
+.guide-faq-item[open] summary::after{content:"−"}
+.guide-faq-item p{margin:0 0 20px;font-size:14.5px;color:#5d7080;line-height:1.65}
+.guide-faq-item p a{color:#398bae;font-weight:600}
+
+@media (max-width:760px){
+  .guide-steps-grid{grid-template-columns:1fr}
+  .guide-checklist-list{grid-template-columns:1fr}
+}

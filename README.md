@@ -5,10 +5,9 @@ Hastane için sıfırdan tasarlanmış, statik HTML/CSS/JS tabanlı kurumsal web
 ## Sayfalar
 
 - `index.html` — Ana sayfa
-- `hakkimizda.html` — Hakkımızda
 - `bolumler.html` — Bölümlerimiz (tüm uzmanlık alanları)
 - `doktorlarimiz.html` — Doktorlarımız
-- `iletisim.html` — İletişim ve online randevu formu
+- `iletisim.html` — Hakkımızda, İletişim ve online randevu formu
 
 ## İçerik Kaynağı
 
