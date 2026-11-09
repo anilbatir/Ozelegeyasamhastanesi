@@ -51,6 +51,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/hasta-rehberi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/gizlilik-politikasi.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.egeyasamhastanesi.com.tr/doktorlarimiz.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
