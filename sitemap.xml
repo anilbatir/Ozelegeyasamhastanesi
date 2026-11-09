@@ -26,6 +26,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/ortopedi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/kadin-dogum.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/cocuk-sagligi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/genel-cerrahi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.egeyasamhastanesi.com.tr/dahiliye.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.egeyasamhastanesi.com.tr/doktorlarimiz.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

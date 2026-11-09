@@ -252,8 +252,8 @@
       <h4>Bölümler</h4>
       <ul>
         <li><a href="kardiyoloji.html">Kardiyoloji</a></li>
-        <li><a href="bolumler.html">Kadın Doğum</a></li>
-        <li><a href="bolumler.html">Ortopedi</a></li>
+        <li><a href="kadin-dogum.html">Kadın Doğum</a></li>
+        <li><a href="ortopedi.html">Ortopedi</a></li>
         <li><a href="bolumler.html">Tüm Bölümler</a></li>
       </ul>
     </div>
@@ -271,6 +271,16 @@
 
 <script>const btn=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');btn?.addEventListener('click',()=>nav.classList.toggle('open'));</script>
 <script>document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script>
+(() => {
+  const params = new URLSearchParams(location.search);
+  const bolum = params.get('bolum');
+  const select = document.querySelector('#bolum');
+  if (bolum && select && Array.from(select.options).some(o => o.value === bolum)) {
+    select.value = bolum;
+  }
+})();
+</script>
 <script>
 (() => {
   const form = document.querySelector('#appointment-form');
